@@ -1,14 +1,11 @@
+"--------------------------------------------------
+" Config.
 
-if !&compatible
-  set nocompatible
-endif
-
-" Pythonのパス
+" Python Path
 let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
 
 "--------------------------------------------------
-" プラグイン関連
-"--------------------------------------------------
+" Plugins. -> dein.vim
 
 " Neovim設定ディレクトリ
 let nvim_dir = substitute($XDG_CONFIG_HOME . '/nvim/', '\', '/', 'g')
@@ -51,7 +48,54 @@ endif
 filetype plugin indent on
 syntax enable
 
-" 未インストールのプラグインがある場合はインストール
 if dein#check_install()
   call dein#install()
 endif
+
+"--------------------------------------------------
+" Settings.
+
+" Search and Replace.
+set ignorecase
+set smartcase
+set wrapscan
+set incsearch
+set inccommand=split
+
+" Tabs.
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+set expandtab
+set smarttab
+set shiftround
+
+" Indent.
+set autoindent
+set smartindent
+
+" Window size at startup.
+set columns=110
+set lines=63
+
+" Line Number.
+set number
+
+" Highlight cancellation by pressing Esc twice.
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+
+" file type setting
+au BufRead,BufNewFile,BufReadPre *.txt   set filetype=markdown
+
+"--------------------------------------------------
+" Settings For HTML.
+
+" Append br tag.
+autocmd FileType html inoremap <C-CR> <br>
+
+"--------------------------------------------------
+" Settings Other.
+
+"Vim :w Use HHKB
+map ; :
+

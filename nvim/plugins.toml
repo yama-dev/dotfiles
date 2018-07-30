@@ -7,3 +7,24 @@ repo = 'Shougo/denite.nvim'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+build = '''
+  npm install -g tern
+'''
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+  colorscheme tender
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
