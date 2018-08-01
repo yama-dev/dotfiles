@@ -1,0 +1,31 @@
+[user]
+	name = yama-dev
+	email = tatsuya.yamamoto69@gmail.com
+[core]
+	filemode = false
+	quotepath = off
+	autocrlf = false
+	editor = vim
+	compression = 0
+[http]
+	postBuffer = 524288000
+[color]
+	ui = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	l = log --graph --decorate --oneline
+  ls = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  la = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  s = status --short --branch
+  d = diff --color-words
+  d1 = diff HEAD~
+  d2 = diff HEAD~~
+  d3 = diff HEAD~~~
+  d4 = diff HEAD~~~~
+  d5 = diff HEAD~~~~~
+  d10 = diff HEAD~~~~~~~~~~
+
