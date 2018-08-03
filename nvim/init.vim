@@ -56,6 +56,7 @@ endif
 " Settings.
 
 " Search and Replace.
+set hlsearch
 set ignorecase
 set smartcase
 set wrapscan
@@ -81,11 +82,29 @@ set lines=63
 " Line Number.
 set number
 
+" Make it possible to delete indents and line breaks in backspace.
+set backspace=indent,eol,start
+
+"--------------------------------------------------
+" Settings key-bind.
+
 " Highlight cancellation by pressing Esc twice.
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " file type setting
 au BufRead,BufNewFile,BufReadPre *.txt   set filetype=markdown
+
+
+"--------------------------------------------------
+" Settings For Search and Replace.
+nnoremap / /\v
+nnoremap <C-g> :vim  **/* \| cw
+nnoremap <C-g>f :/\( \\| \)
+nnoremap <C-g>js :vim  **/*.es6 \| cw
+nnoremap <C-g>html :vim  **/*.html \| cw
+nnoremap <C-g>css :vim  **/*.scss \| cw
+nnoremap <C-h> :%s;;;gc
+nnoremap <Space>z /\zs\ze.*
 
 "--------------------------------------------------
 " Settings For HTML.
@@ -98,4 +117,7 @@ autocmd FileType html inoremap <C-CR> <br>
 
 "Vim :w Use HHKB
 map ; :
+
+" clip board "
+set clipboard+=unnamedplus
 

@@ -1,11 +1,19 @@
-[[plugins]]
-repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  call deoplete#custom#option({
+    \ 'auto_complete_delay': 200,
+    \ 'smart_case': v:true,
+    \ })
+'''
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
@@ -17,9 +25,6 @@ build = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-
-[[plugins]]
 repo = 'jacoborus/tender.vim'
 hook_add = '''
   colorscheme tender
@@ -27,4 +32,14 @@ hook_add = '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+  let g:user_emmet_leader_key='<C-e>'
+  let g:user_emmet_settings={"variables":{"lang":"ja"}}
+'''
+
+[[plugins]]
+repo = 'leftouterjoin/changed'
 
