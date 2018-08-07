@@ -82,8 +82,37 @@ set lines=63
 " Line Number.
 set number
 
-" Make it possible to delete indents and line breaks in backspace.
-set backspace=indent,eol,start
+" Command line.
+set cmdheight=3
+set wildmenu
+set wildmode=list:longest,list:full
+set wildchar=<tab>
+set wildignore+=.git,.svn
+set wildignore+=.DS_Store
+
+" Format option.
+set formatoptions+=mM
+
+" Mouse
+set mouse=a
+set mousefocus
+
+" Encoding.
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Backup.
+set backup
+set backupdir=~/.nvim/
+
+" Set cd.
+set autochdir
+
+" Move cursor to move
+set whichwrap=b,s,h,l,<,>,[,]
+
+" clip board
+set clipboard+=unnamedplus
 
 "--------------------------------------------------
 " Settings key-bind.
@@ -92,10 +121,13 @@ set backspace=indent,eol,start
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " file type setting
-au BufRead,BufNewFile,BufReadPre *.txt   set filetype=markdown
+autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
+autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
 
+" change tabsize.
+map <F9> <C-w>10<
+map <F10> <C-w>10>
 
-"--------------------------------------------------
 " Settings For Search and Replace.
 nnoremap / /\v
 nnoremap <C-g> :vim  **/* \| cw
@@ -106,18 +138,18 @@ nnoremap <C-g>css :vim  **/*.scss \| cw
 nnoremap <C-h> :%s;;;gc
 nnoremap <Space>z /\zs\ze.*
 
+
 "--------------------------------------------------
 " Settings For HTML.
 
 " Append br tag.
-autocmd FileType html inoremap <C-CR> <br>
+autocmd FileType xml,html inoremap <C-CR> <br>
+" Append close tag.
+autocmd Filetype xml,html inoremap <buffer> </ </<C-x><C-o>
 
 "--------------------------------------------------
 " Settings Other.
 
-"Vim :w Use HHKB
+" Vim :w Use HHKB
 map ; :
-
-" clip board "
-set clipboard+=unnamedplus
 
