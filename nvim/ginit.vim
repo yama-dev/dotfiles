@@ -1,7 +1,9 @@
+" ginit.vim
 
-if has('win32')
-  Guifont! Ricty:h11
+if IsWindows()
   map! <S-Insert> <C-R>+
-elseif has('mac')
+  Guifont! Ricty:h11
+  GuiLineSpace! -2
+else
 endif
 

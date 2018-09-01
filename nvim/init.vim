@@ -5,6 +5,16 @@
 let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
 
 "--------------------------------------------------
+" Functions.
+
+" Detect env windows.
+command! -nargs=0 IsWindows call IsWindows()
+let s:is_windows = has('win32') || has('win64')
+function! IsWindows()
+  return s:is_windows
+endfunction
+
+"--------------------------------------------------
 " Plugins. -> dein.vim
 
 " Neovim設定ディレクトリ
