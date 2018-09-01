@@ -187,6 +187,42 @@ nnoremap <C-g>css :vim  **/*.scss \| cw
 nnoremap <C-h> :%s;;;gc
 nnoremap <Space>z /\zs\ze.*
 
+" Open new tab.
+noremap <Space>t :tabnew<CR>
+
+" move cursor line.
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+nnoremap <C-f> 20j
+nnoremap <C-b> 20k
+
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L g_
+
+" Not register overwrite.
+xnoremap s "_s
+nnoremap dd "_dd
+
+" Commetout.
+noremap <C-/><C-/> :TComment<CR>
+
+"--------------------------------------------------
+" Settings For Terminal.
+
+" Instantly insert mode.
+if has('nvim')
+  autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
+else
+  autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
+endif
 
 "--------------------------------------------------
 " Settings For HTML.
