@@ -152,6 +152,10 @@ set ambiwidth=double
 " Set Fold.
 set foldmethod=manual   
 
+" Set Syntax.
+set conceallevel=0
+let g:vim_json_syntax_conceal = 0
+
 "--------------------------------------------------
 " Settings key-bind.
 
