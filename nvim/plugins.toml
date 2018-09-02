@@ -3,56 +3,17 @@
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 
-# Interface
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
+[[plugins]] # Plugin to easily access Most Recently Used (MRU) files
+repo = 'Shougo/neomru.vim'
+on_source = 'denite.nvim'
+on_path = '.*'
 
-[[plugins]]
-repo = 'thinca/vim-qfreplace'
+[[plugins]] # Yank
+repo = 'Shougo/neoyank.vim'
+on_source = 'denite.nvim'
+on_event = 'TextYankPost'
 
-[[plugins]]
-repo = 'vim-scripts/renamer.vim'
-
-# Snippet
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-hook_source = '''
-  imap <C-k> <Plug>(neosnippet_expand_or_jump)
-  smap <C-k> <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k> <Plug>(neosnippet_expand_target)
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
-'''
-on_i  = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
-
-[[plugins]]
-repo = 'yama-dev/neosnippet-frontend-snippets'
-
-# deoplete
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-  call deoplete#custom#option({
-    \ 'auto_complete_delay': 200,
-    \ 'smart_case': v:true,
-    \ })
-'''
-hook_source = '''
-  let g:deoplete#enable_at_startup = 1
-  "Tab補完の設定
-  inoremap <expr><tab> pumvisible() ? "\<C-n>" :
-    \ neosnippet#expandable_or_jumpable() ?
-    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
-'''
-on_i = 1
-
+# deoplete.
 [[plugins]]
 repo = 'Shougo/neco-vim'
 
@@ -64,14 +25,75 @@ repo = 'carlitux/deoplete-ternjs'
 build = '''
   npm install -g tern
 '''
+hook_add = '''
+  let g:deoplete#sources#ternjs#filetypes = [
+    \ 'jsx',
+    \ 'vue'
+    \ ]
+'''
+
+# Interface.
+[[plugins]]
+repo = 'Shougo/unite.vim'
 
 [[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+hook_add = '''
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
+let g:vimfiler_enable_auto_cd=1
+"オプション -simple
+noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=48 -toggle -no-quit<CR>
+'''
 
-# Syntax
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+
+[[plugins]]
+repo = 'vim-scripts/renamer.vim'
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+let g:neoterm_autoscroll=1
+let g:neoterm_size=60
+let g:neoterm_default_mod = 'vertical'
+tnoremap <silent> <ESC> <C-\><C-n><C-w>
+'''
+[[plugins]]
+repo = 'vimlab/split-term.vim'
+
+# Syntax.
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
 [[plugins]]
 repo = 'othree/yajs.vim'
 
-# StatusLine
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'shawncplus/phpcomplete.vim'
+
+# Snippet.
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# StatusLine.
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
@@ -145,10 +167,15 @@ hook_add = '''
 repo = 'terryma/vim-multiple-cursors'
 hook_add = '''
   let g:multi_cursor_use_default_mapping=0
-  let g:multi_cursor_next_key='<C-d>'
-  let g:multi_cursor_prev_key='<C-p>'
-  let g:multi_cursor_skip_key='<C-x>'
-  let g:multi_cursor_quit_key='<Esc>'
+
+  let g:multi_cursor_start_word_key      = '<C-n>'
+  let g:multi_cursor_select_all_word_key = '<A-n>'
+  let g:multi_cursor_start_key           = 'g<C-n>'
+  let g:multi_cursor_select_all_key      = 'g<A-n>'
+  let g:multi_cursor_next_key            = '<C-n>'
+  let g:multi_cursor_prev_key            = '<C-p>'
+  let g:multi_cursor_skip_key            = '<C-x>'
+  let g:multi_cursor_quit_key            = '<Esc>'
 '''
 
 [[plugins]]

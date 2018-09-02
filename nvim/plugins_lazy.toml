@@ -1,0 +1,52 @@
+
+# Snippet.
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_i  = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+hook_add = '''
+  imap <C-k> <Plug>(neosnippet_jump_or_expand)
+  smap <C-k> <Plug>(neosnippet_jump_or_expand)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+  if has('conceal')
+    set conceallevel=2 concealcursor=i
+  endif
+  let g:neosnippet#snippets_directory= $XDG_CONFIG_HOME.'\nvim\.cache\dein\repos\github.com\yama-dev\neosnippet-frontend-snippets\neosnippets\'
+'''
+
+# deoplete.
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+on_if = 'has("nvim")'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)"
+    \: pumvisible() ? "\<C-n>" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)"
+    \: "\<TAB>"
+  set completeopt+=noinsert
+'''
+
+# neocomplete.
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+on_if = '!has("nvim")'
+
+# Util.
+[[plugins]]
+repo = 'equalsraf/neovim-gui-shim'
+on_if = 'has("nvim")'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['css','scss','sass','less']
+
+[[plugins]]
+repo = 'shmargum/vim-sass-colors'
+on_ft = ['css','scss','sass','less']
+
