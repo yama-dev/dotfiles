@@ -13,11 +13,27 @@ let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
 "--------------------------------------------------
 " Functions.
 
+" Output message.
+command! -nargs=0 EchoMessage call EchoMessage()
+function! EchoMessage()
+  put =execute('messages')
+endfunction
+
 " Detect env windows.
 command! -nargs=0 IsWindows call IsWindows()
 let s:is_windows = has('win32') || has('win64')
 function! IsWindows()
   return s:is_windows
+endfunction
+
+" Toggle Fullscreen.
+command! -nargs=0 ToggleFullScreen call ToggleFullScreen()
+function! ToggleFullScreen()
+  if g:GuiWindowFullScreen == 0
+    call GuiWindowFullScreen(1)
+  else
+    call GuiWindowFullScreen(0)
+  endif
 endfunction
 
 "--------------------------------------------------
