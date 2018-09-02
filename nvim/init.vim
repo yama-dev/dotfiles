@@ -179,11 +179,11 @@ map <F11> :ToggleFullScreen<CR>
 
 " Settings For Search and Replace.
 nnoremap / /\v
-nnoremap <C-g> :vim  **/* \| cw
+nnoremap <C-g> :vim **/* \| cw
 nnoremap <C-g>f :/\( \\| \)
-nnoremap <C-g>js :vim  **/*.es6 \| cw
-nnoremap <C-g>html :vim  **/*.html \| cw
-nnoremap <C-g>css :vim  **/*.scss \| cw
+nnoremap <C-g>js :vim **/*.es6 \| cw
+nnoremap <C-g>html :vim **/*.html \| cw
+nnoremap <C-g>css :vim **/*.scss \| cw
 nnoremap <C-h> :%s;;;gc
 nnoremap <Space>z /\zs\ze.*
 
@@ -210,9 +210,6 @@ vnoremap L g_
 " Not register overwrite.
 xnoremap s "_s
 nnoremap dd "_dd
-
-" Commetout.
-noremap <C-/><C-/> :TComment<CR>
 
 "--------------------------------------------------
 " Settings For Terminal.

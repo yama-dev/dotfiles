@@ -180,6 +180,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
+hook_add = '''
+  noremap <C-/><C-/> :TComment<CR>
+'''
  
 # colorscheme.
 [[plugins]]
