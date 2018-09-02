@@ -149,6 +149,9 @@ set clipboard+=unnamedplus
 " For IME.
 set ambiwidth=double
 
+" Set Fold.
+set foldmethod=manual   
+
 "--------------------------------------------------
 " Settings key-bind.
 
