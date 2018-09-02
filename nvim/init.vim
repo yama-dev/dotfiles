@@ -1,3 +1,9 @@
+" init.vim
+
+if &compatible
+ set nocompatible
+endif
+
 "--------------------------------------------------
 " Config.
 
@@ -118,10 +124,10 @@ set backupdir=~/.nvim/
 " Set cd.
 set autochdir
 
-" Move cursor to move
+" Move cursor to move.
 set whichwrap=b,s,h,l,<,>,[,]
 
-" clip board
+" clip board.
 set clipboard+=unnamedplus
 
 "--------------------------------------------------
