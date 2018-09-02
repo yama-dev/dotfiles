@@ -146,6 +146,9 @@ set whichwrap=b,s,h,l,<,>,[,]
 " clip board.
 set clipboard+=unnamedplus
 
+" For IME.
+set ambiwidth=double
+
 "--------------------------------------------------
 " Settings key-bind.
 
