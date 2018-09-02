@@ -166,11 +166,16 @@ nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " file type setting
 autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
+autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
 autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
+autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
 
 " change tabsize.
 map <F9> <C-w>10<
 map <F10> <C-w>10>
+
+" change tabsize.
+map <F11> :ToggleFullScreen<CR>
 
 " Settings For Search and Replace.
 nnoremap / /\v
