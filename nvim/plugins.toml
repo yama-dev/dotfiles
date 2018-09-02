@@ -65,12 +65,7 @@ build = '''
   npm install -g tern
 '''
 
-# colorscheme
 [[plugins]]
-repo = 'jacoborus/tender.vim'
-hook_add = '''
-  colorscheme tender
-'''
 
 # Syntax
 [[plugins]]
@@ -159,3 +154,34 @@ hook_source = '''
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
  
+# colorscheme.
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+"  colorscheme tender
+'''
+
+[[plugins]]
+repo = 'trusktr/seti.vim'
+hook_add = '''
+"  colorscheme seti
+'''
+
+[[plugins]]
+repo = 'vim-scripts/xoria256.vim'
+hook_add = '''
+"  colorscheme xoria256
+'''
+
+[[plugins]]
+repo = 'zaki/zazen'
+hook_add = '''
+"  colorscheme zazen
+'''
+
+[[plugins]]
+repo = 'Haron-Prime/Antares'
+hook_add = '''
+  colorscheme Antares
+'''
+
