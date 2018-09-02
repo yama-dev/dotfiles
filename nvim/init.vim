@@ -159,6 +159,8 @@ let g:vim_json_syntax_conceal = 0
 "--------------------------------------------------
 " Settings key-bind.
 
+let mapleader = "\<Space>"
+
 " Highlight cancellation by pressing Esc twice.
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
