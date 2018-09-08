@@ -167,10 +167,14 @@ let mapleader = "\<Space>"
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " file type setting
-autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
-autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
-autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
-autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
+augroup filetypeds
+  autocmd!
+  autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
+  autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
+  autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
+  autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
+  autocmd BufRead,BufNewFile *.scss set filetype=scss.css
+augroup END
 
 " change tabsize.
 map <F9> <C-w>10<
