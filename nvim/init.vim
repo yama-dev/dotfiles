@@ -191,6 +191,8 @@ nnoremap <Space>z /\zs\ze.*
 
 " Open new tab.
 noremap <Space>t :tabnew<CR>
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
 
 " move cursor line.
 nnoremap j gj
