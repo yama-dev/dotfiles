@@ -155,6 +155,9 @@ set foldmethod=manual
 " Set Syntax.
 set conceallevel=0
 
+" Display current line.
+set cursorline
+
 "--------------------------------------------------
 " Settings key-bind.
 
