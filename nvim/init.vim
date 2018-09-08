@@ -29,10 +29,10 @@ endfunction
 " Toggle Fullscreen.
 command! -nargs=0 ToggleFullScreen call ToggleFullScreen()
 function! ToggleFullScreen()
-  if g:GuiWindowFullScreen == 0
-    call GuiWindowFullScreen(1)
+  if g:GuiWindowMaximized == 0
+    call GuiWindowMaximized(1)
   else
-    call GuiWindowFullScreen(0)
+    call GuiWindowMaximized(0)
   endif
 endfunction
 
