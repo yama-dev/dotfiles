@@ -85,6 +85,9 @@ repo = 'vim-jp/cpp-vim'
 
 [[plugins]]
 repo = 'elzr/vim-json'
+hook_add = '''
+  let g:vim_json_syntax_conceal = 0
+'''
 
 [[plugins]]
 repo = 'shawncplus/phpcomplete.vim'
@@ -96,6 +99,10 @@ repo = 'Shougo/neosnippet-snippets'
 # StatusLine.
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+hook_add = '''
+  " Smarter tab line.
+  " let g:airline#extensions#tabline#enabled = 1
+'''
 
 # HTML.
 [[plugins]]
