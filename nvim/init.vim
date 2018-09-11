@@ -40,7 +40,7 @@ endfunction
 " Plugins. -> dein.vim
 
 " Neovim設定ディレクトリ
-let nvim_dir = substitute($XDG_CONFIG_HOME . '/nvim/', '\', '/', 'g')
+let nvim_dir = $XDG_CONFIG_HOME . '/nvim/'
 
 " deinの関連のパス
 let dein_path = 'github.com/Shougo/dein.vim'
@@ -56,7 +56,7 @@ if !isdirectory(dein_repo_dir)
   execute '!git clone ' . dein_url dein_repo_dir
 endif
 " dein.vimをruntimepathへ追加
-let &runtimepath = substitute( dein_repo_dir , '/', '\', 'g') . "," . &runtimepath
+let &runtimepath = dein_repo_dir . "," . &runtimepath
 
 " 設定開始
 if dein#load_state(dein_dir)
