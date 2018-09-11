@@ -233,6 +233,11 @@ else
   autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
 endif
 
+" Paste register.
+if has('nvim')
+  tnoremap <expr> <A-v> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+endif
+
 "--------------------------------------------------
 " Settings For HTML.
 
