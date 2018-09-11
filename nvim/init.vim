@@ -119,8 +119,8 @@ set cmdheight=3
 set wildmenu
 set wildmode=list:longest,list:full
 set wildchar=<tab>
-set wildignore+=.git,.svn
-set wildignore+=.DS_Store
+set wildignore+=.git/*,.svn/*,.DS_Store,*.swp
+set wildignore+=node_modules/*
 
 " Format option.
 set formatoptions+=mM
