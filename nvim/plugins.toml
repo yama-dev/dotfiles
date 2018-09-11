@@ -236,3 +236,6 @@ hook_add = '''
   colorscheme Antares
 '''
 
+[[plugins]]
+repo = 'nelsyeung/twig.vim'
+
