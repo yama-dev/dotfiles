@@ -158,6 +158,9 @@ set conceallevel=0
 " Display current line.
 set cursorline
 
+" set list
+" set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
 "--------------------------------------------------
 " Settings key-bind.
 
@@ -191,10 +194,11 @@ nnoremap <C-g>js :vim **/*.es6 \| cw
 nnoremap <C-g>html :vim **/*.html \| cw
 nnoremap <C-g>css :vim **/*.scss \| cw
 nnoremap <C-h> :%s;;;gc
-nnoremap <Space>z /\zs\ze.*
+nnoremap <Leader>z /\zs\ze.*
+
 
 " Open new tab.
-noremap <Space>t :tabnew<CR>
+noremap <Leader>t :tabnew<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
