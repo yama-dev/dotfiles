@@ -196,6 +196,8 @@ nnoremap <C-g>css :vim **/*.scss \| cw
 nnoremap <C-h> :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
 
+" Grep.
+autocmd QuickFixCmdPost *grep* cwindow
 
 " Open new tab.
 noremap <Leader>t :tabnew<CR>
