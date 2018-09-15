@@ -10,6 +10,8 @@ endif
 " Python Path
 let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
 
+let mapleader = "\<Space>"
+
 "--------------------------------------------------
 " Functions.
 
@@ -163,8 +165,6 @@ set cursorline
 
 "--------------------------------------------------
 " Settings key-bind.
-
-let mapleader = "\<Space>"
 
 " Highlight cancellation by pressing Esc twice.
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>

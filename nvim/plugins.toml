@@ -107,7 +107,8 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'vim-airline/vim-airline'
 hook_add = '''
   " Smarter tab line.
-  " let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
 '''
 
 # HTML.
@@ -172,7 +173,6 @@ hook_add = '''
 repo = 'Yggdroot/indentLine'
 hook_add = '''
   let g:indentLine_faster = 1
-  nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
 '''
 
 # Util.
