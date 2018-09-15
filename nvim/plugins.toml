@@ -204,7 +204,22 @@ repo = 'tomtom/tcomment_vim'
 hook_add = '''
   noremap <C-/><C-/> :TComment<CR>
 '''
- 
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+set tags=tags;
+let g:tagbar_left = 0
+let g:tagbar_width = 50
+let g:tagbar_autoclose = 0
+let g:tagbar_autofocus = 0
+let g:tagbar_show_linenumbers = 1
+noremap <Leader>l :Tagbar<CR>
+'''
+
 # colorscheme.
 [[plugins]]
 repo = 'jacoborus/tender.vim'
