@@ -225,6 +225,18 @@ vnoremap L g_
 xnoremap s "_s
 nnoremap dd "_dd
 
+" Add Line.
+nnoremap <Leader>al  :%s/$/\r/gc<CR>
+vnoremap <Leader>al  :s/$/\r/gc<CR>
+
+" Delete Line.
+nnoremap <Leader>dl  :%s/^$\n//gc<CR>
+vnoremap <Leader>dl  :s/^$\n//gc<CR>
+
+" Delete Space.
+nnoremap <Leader>db  :%s/\s\+//gc<CR>
+vnoremap <Leader>db  :s/\s\+//gc<CR>
+
 "--------------------------------------------------
 " Settings For Terminal.
 
