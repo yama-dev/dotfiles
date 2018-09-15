@@ -149,7 +149,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard+=unnamedplus
 
 " For IME.
-set ambiwidth=double
+" set ambiwidth=double
 
 " Set Fold.
 set foldmethod=manual   
