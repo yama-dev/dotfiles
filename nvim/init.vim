@@ -5,14 +5,6 @@ if &compatible
 endif
 
 "--------------------------------------------------
-" Config.
-
-" Python Path
-let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
-
-let mapleader = "\<Space>"
-
-"--------------------------------------------------
 " Functions.
 
 " Output message.
@@ -37,6 +29,18 @@ function! ToggleFullScreen()
     call GuiWindowMaximized(0)
   endif
 endfunction
+
+"--------------------------------------------------
+" Config.
+
+" Python Path
+if IsWindows()
+  let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
+else
+  let g:python3_host_prog = fnameescape(expand($HOME . '/.pyenv/shims/python'))
+endif
+
+let mapleader = "\<Space>"
 
 "--------------------------------------------------
 " Plugins. -> dein.vim
@@ -110,8 +114,8 @@ set autoindent
 set smartindent
 
 " Window size at startup.
-set columns=110
-set lines=63
+set columns=160
+set lines=50
 
 " Line Number.
 set number
