@@ -13,20 +13,23 @@ __Use FrontEndEngineer.__
 
 ``` text
 .
-├── LICENSE
-├── README.md
-├── bash
-├── git
-├── nvim
-│   ├── ginit.vim
-│   ├── init.vim
-│   ├── plugins.toml
-│   └── plugins_lazy.toml
-└── vim
-    ├── gvimrc
-    ├── vim81
-    │   ├── colors
-    │   │   └── yama-dev.vim
-    │   └── filetype.vim
-    └── vimrc
+│  LICENSE
+│  README.md
+│  
+├─bash
+│      .bashrc
+│      
+├─git
+│      .gitconfig
+│      .gitignore
+│      
+├─nvim
+│      ginit.vim
+│      init.vim
+│      plugins.toml
+│      plugins_lazy.toml
+│      
+└─vim
+        gvimrc
+        vimrc
 ```
