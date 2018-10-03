@@ -238,8 +238,8 @@ nnoremap <Leader>dl  :%s/^$\n//gc<CR>
 vnoremap <Leader>dl  :s/^$\n//gc<CR>
 
 " Delete Space.
-nnoremap <Leader>db  :%s/\s\+//gc<CR>
-vnoremap <Leader>db  :s/\s\+//gc<CR>
+nnoremap <Leader>ds  :%s/\s\+//gc<CR>
+vnoremap <Leader>ds  :s/\s\+//gc<CR>
 
 "--------------------------------------------------
 " Settings For Terminal.
