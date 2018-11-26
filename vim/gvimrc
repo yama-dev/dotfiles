@@ -20,7 +20,7 @@ set viminfo+=n~/.vim/viminfo
 " フォント設定
 if has('win32')
   " for Windows
-  set guifont=Ricty:h11:cSHIFTJIS
+  set guifont=Ricty:h12:cSHIFTJIS
   " 行間隔の設定
   set linespace=-1
   if has('kaoriya')
