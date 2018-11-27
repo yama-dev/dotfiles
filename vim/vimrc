@@ -339,6 +339,7 @@ map <Space>i :Align<CR>
 nnoremap <Space>/ :TComment<CR>
 
 " Filetype.
+autocmd BufRead,BufNewFile *.txt setfiletype markdown
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufRead,BufNewFile *.ejs setfiletype html
 autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
@@ -356,15 +357,10 @@ let howm_fileformat      = 'dos'
 map ; :
 
 " Markdown Syntax, vim-markdown
-autocmd BufRead,BufNewFile *.txt setfiletype markdown
 let g:vim_markdown_folding_level = 6
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_math = 1
-" let g:vim_markdown_math = 1
-" let g:vim_markdown_frontmatter = 1
-" let g:vim_markdown_toml_frontmatter = 1
-" let g:vim_markdown_json_frontmatter = 1
 
 " unite-outline
 nnoremap <silent> <C-o> :<C-u>Unite -vertical -no-quit -winwidth=30 outline<CR><ESC>
