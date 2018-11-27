@@ -171,6 +171,8 @@ NeoBundle 'surround.vim'
 NeoBundle 'vim-scripts/matchit.zip'
 " renamer.vim
 NeoBundle 'vim-scripts/renamer.vim'
+" vim-toml
+NeoBundle 'cespare/vim-toml'
 
 call neobundle#end()
 NeoBundleCheck
@@ -336,9 +338,10 @@ map <Space>i :Align<CR>
 " tcomment_vim
 nnoremap <Space>/ :TComment<CR>
 
-" Javascript Syntax
+" Filetype.
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufRead,BufNewFile *.ejs setfiletype html
+autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 
 " QFixHowm
 " キーマップリーダー
