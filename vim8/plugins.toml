@@ -1,0 +1,256 @@
+
+# denite.
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]] # Plugin to easily access Most Recently Used (MRU) files
+repo = 'Shougo/neomru.vim'
+on_source = 'denite.nvim'
+on_path = '.*'
+
+[[plugins]] # Yank
+repo = 'Shougo/neoyank.vim'
+on_source = 'denite.nvim'
+on_event = 'TextYankPost'
+
+# deoplete.
+[[plugins]]
+repo = 'Shougo/neco-vim'
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+build = '''
+  npm install -g tern
+'''
+hook_add = '''
+  let g:deoplete#sources#ternjs#filetypes = [
+    \ 'jsx',
+    \ 'vue'
+    \ ]
+'''
+
+# Interface.
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+hook_add = '''
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
+let g:vimfiler_enable_auto_cd=1
+"オプション -simple
+noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=48 -toggle -no-quit<CR>
+'''
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+
+[[plugins]]
+repo = 'vim-scripts/renamer.vim'
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+let g:neoterm_autoscroll=1
+let g:neoterm_size=60
+let g:neoterm_default_mod = 'vertical'
+tnoremap <silent> <ESC> <C-\><C-n><C-w>
+'''
+[[plugins]]
+repo = 'vimlab/split-term.vim'
+
+# Syntax.
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+hook_add = '''
+  let g:vim_markdown_conceal = 0
+  let g:vim_markdown_folding_disabled = 0
+  let g:vim_markdown_folding_level = 6
+  let g:vim_markdown_new_list_item_indent = 2
+'''
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+hook_add = '''
+  let g:vim_json_syntax_conceal = 0
+'''
+
+[[plugins]]
+repo = 'shawncplus/phpcomplete.vim'
+
+# Snippet.
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# StatusLine.
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  " Smarter tab line.
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+'''
+
+# HTML.
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+  let g:user_emmet_leader_key='<C-e>'
+  let g:user_emmet_settings={"variables":{"lang":"ja"}}
+'''
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+
+# changed.
+[[plugins]]
+repo = 'leftouterjoin/changed'
+
+# Git.
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# toml.
+[[plugins]]
+repo = 'cespare/vim-toml'
+hook_add = '''
+  autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
+'''
+
+# Format.
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  nmap ga <Plug>(EasyAlign)
+  xmap ga <Plug>(EasyAlign)
+'''
+
+[[plugins]]
+repo = 't9md/vim-textmanip'
+hook_add = '''
+  xmap <M-d> <Plug>(textmanip-duplicate-down)
+  nmap <M-d> <Plug>(textmanip-duplicate-down)
+  xmap <M-D> <Plug>(textmanip-duplicate-up)
+  nmap <M-D> <Plug>(textmanip-duplicate-up)
+
+  xmap <C-j> <Plug>(textmanip-move-down)
+  xmap <C-k> <Plug>(textmanip-move-up)
+  xmap <C-h> <Plug>(textmanip-move-left)
+  xmap <C-l> <Plug>(textmanip-move-right)
+
+  " toggle insert/replace with <F10>
+  nmap <F10> <Plug>(textmanip-toggle-mode)
+  xmap <F10> <Plug>(textmanip-toggle-mode)
+
+  " use allow key to force replace movement
+  xmap  <Up>     <Plug>(textmanip-move-up-r)
+  xmap  <Down>   <Plug>(textmanip-move-down-r)
+  xmap  <Left>   <Plug>(textmanip-move-left-r)
+  xmap  <Right>  <Plug>(textmanip-move-right-r)
+'''
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_faster = 1
+'''
+
+# Util.
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+hook_add = '''
+  let g:multi_cursor_use_default_mapping=0
+
+  let g:multi_cursor_start_word_key      = '<C-n>'
+  let g:multi_cursor_select_all_word_key = '<A-n>'
+  let g:multi_cursor_start_key           = 'g<C-n>'
+  let g:multi_cursor_select_all_key      = 'g<A-n>'
+  let g:multi_cursor_next_key            = '<C-n>'
+  let g:multi_cursor_prev_key            = '<C-p>'
+  let g:multi_cursor_skip_key            = '<C-x>'
+  let g:multi_cursor_quit_key            = '<Esc>'
+
+  function! Multiple_cursors_before()
+    call deoplete#disable()
+  endfunction
+
+  function! Multiple_cursors_after()
+    call deoplete#enable()
+  endfunction
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+hook_add = '''
+  noremap <C-/><C-/> :TComment<CR>
+'''
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+set tags=tags;
+let g:tagbar_left = 0
+let g:tagbar_width = 50
+let g:tagbar_autoclose = 0
+let g:tagbar_autofocus = 0
+let g:tagbar_show_linenumbers = 1
+noremap <Leader>l :Tagbar<CR>
+'''
+
+# colorscheme.
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+"  colorscheme tender
+'''
+
+[[plugins]]
+repo = 'trusktr/seti.vim'
+hook_add = '''
+"  colorscheme seti
+'''
+
+[[plugins]]
+repo = 'vim-scripts/xoria256.vim'
+hook_add = '''
+"  colorscheme xoria256
+'''
+
+[[plugins]]
+repo = 'zaki/zazen'
+hook_add = '''
+"  colorscheme zazen
+'''
+
+[[plugins]]
+repo = 'Haron-Prime/Antares'
+hook_add = '''
+  colorscheme Antares
+'''
+
+[[plugins]]
+repo = 'nelsyeung/twig.vim'
+
