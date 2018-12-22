@@ -16,6 +16,13 @@ function! IsWindows()
   return s:is_windows
 endfunction
 
+" Detect env mac.
+command! -nargs=0 IsMac call IsMac()
+let s:is_mac = has('mac')
+function! IsMac()
+  return s:is_mac
+endfunction
+
 " Toggle Fullscreen.
 command! -nargs=0 ToggleFullScreen call ToggleFullScreen()
 function! ToggleFullScreen()
