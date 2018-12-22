@@ -36,11 +36,13 @@ endfunction
 "--------------------------------------------------
 " Setting Plugin.
 
-" Python Path
-if IsWindows()
-  let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
-else
-  let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+if has('python3')
+  " Python Path
+  if IsWindows()
+    let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
+  else
+    let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+  endif
 endif
 
 if &compatible
