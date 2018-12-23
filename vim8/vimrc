@@ -278,10 +278,13 @@ endif
 "--------------------------------------------------
 " Settings For HTML.
 
-" Append br tag.
-autocmd FileType xml,html inoremap <C-CR> <br>
-" Append close tag.
-autocmd Filetype xml,html inoremap <buffer> </ </<C-x><C-o>
+augroup filetypes
+  autocmd!
+  " Append br tag.
+  autocmd FileType xml,html inoremap <C-CR> <br>
+  " Append close tag.
+  autocmd Filetype xml,html inoremap <buffer> </ </<C-x><C-o>
+augroup END
 
 "--------------------------------------------------
 " Settings Other.
