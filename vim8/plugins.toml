@@ -95,7 +95,9 @@ hook_add = '''
   let g:vim_json_syntax_conceal = 0
 '''
 
+# PHP.
 [[plugins]]
+# repo = 'lvht/phpcd.vim'
 repo = 'shawncplus/phpcomplete.vim'
 
 # Snippet.
