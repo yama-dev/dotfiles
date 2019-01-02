@@ -15,6 +15,12 @@ on_event = 'TextYankPost'
 
 # deoplete.
 [[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
 repo = 'Shougo/neco-vim'
 
 [[plugins]]
@@ -99,6 +105,9 @@ hook_add = '''
 [[plugins]]
 # repo = 'lvht/phpcd.vim'
 repo = 'shawncplus/phpcomplete.vim'
+
+[[plugins]]
+repo = 'yama-dev/neosnippet-frontend-snippets'
 
 # Snippet.
 [[plugins]]
