@@ -2,8 +2,7 @@
 
 "--------------------------------------------------
 " Import
-source $VIM/vimrc_kaoriya.vim
-source $VIM/functions.vim
+source $HOME/functions.vim
 
 "--------------------------------------------------
 " Setting Plugin.
@@ -13,7 +12,7 @@ if has('python3')
   if IsWindows()
     let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
   else
-    let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+    let g:python3_host_prog = '/usr/local/bin/python3'
   endif
 endif
 
@@ -37,8 +36,8 @@ if dein#load_state(s:home_dir . '/.cache/dein')
   call dein#add(s:home_dir . '/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " プラグインリストファイル
-  let s:toml = s:vim_dir . '/plugins.toml'
-  let s:lazy_toml = s:vim_dir . '/plugins_lazy.toml'
+  let s:toml = s:home_dir . '/plugins.toml'
+  let s:lazy_toml = s:home_dir . '/plugins_lazy.toml'
 
   " プラグインリストを読み込みキャッシュする
   call dein#load_toml(s:toml, {'lazy': 0})
