@@ -12,14 +12,13 @@ hook_add = '''
   if has('conceal')
     set conceallevel=2 concealcursor=i
   endif
-  let g:neosnippet#snippets_directory= $XDG_CONFIG_HOME.'\nvim\.cache\dein\repos\github.com\yama-dev\neosnippet-frontend-snippets\neosnippets\'
+  let g:neosnippet#snippets_directory= $HOME.'\.cache\dein\repos\github.com\yama-dev\neosnippet-frontend-snippets\neosnippets\'
 '''
 
 # deoplete.
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
-on_if = 'has("nvim")'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
   imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
@@ -30,12 +29,6 @@ hook_add = '''
     \: "\<TAB>"
   set completeopt+=noinsert
 '''
-
-# neocomplete.
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
-on_if = '!has("nvim")'
 
 # Util.
 [[plugins]]
