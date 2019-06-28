@@ -15,7 +15,7 @@ if has('win32')
   " for Windows
 
   " Font Setttings.
-  set guifont=Ricty:h14
+  set guifont=Ricty_Diminished:h12
   set linespace=-1
   set renderoptions=type:directx
   set antialias
