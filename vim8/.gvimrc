@@ -1,5 +1,10 @@
 " gvimrc
 
+" Menu garbled
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+
 " Menu.
 set guioptions-=m
 set guioptions-=T
