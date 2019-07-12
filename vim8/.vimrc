@@ -3,6 +3,7 @@
 "--------------------------------------------------
 " Import
 source $HOME/functions.vim
+source $HOME/coc.vim
 
 "--------------------------------------------------
 " Setting Plugin.
@@ -46,6 +47,8 @@ if dein#load_state(s:home_dir . '/.cache/dein')
   " プラグインリストファイル
   let s:toml = s:home_dir . '/plugins.toml'
   let s:lazy_toml = s:home_dir . '/plugins_lazy.toml'
+
+  call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
 
   " プラグインリストを読み込みキャッシュする
   call dein#load_toml(s:toml, {'lazy': 0})
