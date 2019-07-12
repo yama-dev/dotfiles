@@ -10,7 +10,7 @@ source $HOME/functions.vim
 if has('python3')
   " Python Path
   if IsWindows()
-    let g:python3_host_prog = fnameescape(expand('C:\Python37\python.exe'))
+    let g:python3_host_prog = fnameescape(expand($VIM.'/python3/python.exe'))
   else
     let g:python3_host_prog = '/usr/local/bin/python3'
   endif
@@ -138,11 +138,10 @@ if has('ambiwidth')
 endif
 
 " Set Fold.
-set foldmethod=manual   
+set foldmethod=manual
 
 " Set Syntax.
 set conceallevel=0
-let g:vim_json_syntax_conceal = 0
 set synmaxcol=500
 
 " Display current line.
@@ -160,14 +159,14 @@ set spell
 set spelllang=en,cjk
 
 " file type setting
-augroup filetypes
+augroup AutoCmdFiletype
   autocmd!
   autocmd FileType html,markdown set synmaxcol=250
   autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
   autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
   autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
   autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
-  autocmd BufRead,BufNewFile,BufReadPre *.scss set filetype=scss.css
+  autocmd BufRead,BufNewFile,BufReadPre *.scss set filetype=scss
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 augroup END
 
@@ -253,7 +252,7 @@ endif
 "--------------------------------------------------
 " Settings For HTML.
 
-augroup filetypes
+augroup AutoCmdHtml
   autocmd!
   " Append br tag.
   autocmd FileType xml,html inoremap <C-CR> <br>
