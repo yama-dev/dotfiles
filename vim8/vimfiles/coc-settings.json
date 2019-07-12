@@ -1,0 +1,9 @@
+{
+  "suggest.snippetIndicator": "->",
+  "css.filetypes": [
+    "css",
+    "less",
+    "scss",
+    "sass"
+  ]
+}
