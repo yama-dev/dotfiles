@@ -73,6 +73,7 @@ repo = 'vimlab/split-term.vim'
 # Syntax.
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
+on_ft = ['css','scss','sass','less']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
@@ -87,6 +88,7 @@ repo = 'jelera/vim-javascript-syntax'
 repo = 'plasticboy/vim-markdown'
 hook_add = '''
   let g:vim_markdown_conceal = 0
+  let g:vim_markdown_conceal_code_blocks = 0
   let g:vim_markdown_folding_disabled = 0
   let g:vim_markdown_folding_level = 6
   let g:vim_markdown_new_list_item_indent = 2
@@ -103,8 +105,10 @@ hook_add = '''
 
 # PHP.
 [[plugins]]
-# repo = 'lvht/phpcd.vim'
 repo = 'shawncplus/phpcomplete.vim'
+
+[[plugins]]
+repo = 'nelsyeung/twig.vim'
 
 [[plugins]]
 repo = 'yama-dev/neosnippet-frontend-snippets'
@@ -200,14 +204,6 @@ hook_add = '''
   let g:multi_cursor_prev_key            = '<C-p>'
   let g:multi_cursor_skip_key            = '<C-x>'
   let g:multi_cursor_quit_key            = '<Esc>'
-
-  function! Multiple_cursors_before()
-    call deoplete#disable()
-  endfunction
-
-  function! Multiple_cursors_after()
-    call deoplete#enable()
-  endfunction
 '''
 
 [[plugins]]
