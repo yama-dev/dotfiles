@@ -7,6 +7,14 @@ source $HOME/functions.vim
 "--------------------------------------------------
 " Setting Plugin.
 
+if IsWindows()
+  if has('nvim')
+  else
+    set runtimepath+=$VIM
+    set pythonthreedll=$VIM/python3/python37.dll
+  endif
+endif
+
 if has('python3')
   " Python Path
   if IsWindows()
@@ -233,6 +241,10 @@ vnoremap <Leader>dl  :s/^$\n//gc<CR>
 " Delete Space.
 nnoremap <Leader>ds  :%s/\s\+//gc<CR>
 vnoremap <Leader>ds  :s/\s\+//gc<CR>
+
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "--------------------------------------------------
 " Settings For Terminal.
