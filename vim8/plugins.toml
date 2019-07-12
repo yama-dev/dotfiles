@@ -85,6 +85,9 @@ repo = 'mxw/vim-jsx'
 repo = 'jelera/vim-javascript-syntax'
 
 [[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
 repo = 'plasticboy/vim-markdown'
 hook_add = '''
   let g:vim_markdown_conceal = 0
@@ -138,10 +141,13 @@ hook_add = '''
 repo = 'alvan/vim-closetag'
 
 # changed.
-[[plugins]]
-repo = 'leftouterjoin/changed'
+# [[plugins]]
+# repo = 'leftouterjoin/changed'
 
 # Git.
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
@@ -257,7 +263,4 @@ repo = 'Haron-Prime/Antares'
 hook_add = '''
   colorscheme Antares
 '''
-
-[[plugins]]
-repo = 'nelsyeung/twig.vim'
 
