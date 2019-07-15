@@ -37,6 +37,7 @@ repo = 'thinca/vim-qfreplace'
 [[plugins]]
 repo = 'vim-scripts/renamer.vim'
 
+# Terminal
 [[plugins]]
 repo = 'kassio/neoterm'
 hook_add = '''
@@ -91,12 +92,21 @@ repo = 'shawncplus/phpcomplete.vim'
 [[plugins]]
 repo = 'nelsyeung/twig.vim'
 
-[[plugins]]
-repo = 'yama-dev/neosnippet-frontend-snippets'
-
 # Snippet.
 [[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+hook_add = '''
+  let g:neosnippet#enable_snipmate_compatibility = 1
+  let g:neosnippet#snippets_directory='~/.cache/dein/repos/github.com/yama-dev/neosnippet-frontend-snippets/neosnippets'
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+'''
+
+[[plugins]]
+repo = 'yama-dev/neosnippet-frontend-snippets'
 
 # StatusLine.
 [[plugins]]
