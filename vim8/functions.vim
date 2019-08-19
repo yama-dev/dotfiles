@@ -25,10 +25,17 @@ endfunction
 " Toggle Fullscreen.
 command! -nargs=0 ToggleFullScreen call ToggleFullScreen()
 function! ToggleFullScreen()
-  if g:GuiWindowMaximized == 0
-    call GuiWindowMaximized(1)
+  if has('nvim')
+    if g:GuiWindowMaximized == 0
+      call GuiWindowMaximized(1)
+    else
+      call GuiWindowMaximized(0)
+    endif
   else
-    call GuiWindowMaximized(0)
+    " set columns=100
+    " set lines=50
+    set columns?
+    set lines?
   endif
 endfunction
 
