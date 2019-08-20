@@ -1,10 +1,10 @@
 
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
 # denite.
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
@@ -28,7 +28,7 @@ let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
 let g:vimfiler_enable_auto_cd=1
 "オプション -simple
-noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=48 -toggle -no-quit<CR>
+noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=50 -toggle -no-quit<CR>
 '''
 
 [[plugins]]
@@ -46,6 +46,7 @@ let g:neoterm_size=60
 let g:neoterm_default_mod = 'vertical'
 tnoremap <silent> <ESC> <C-\><C-n><C-w>
 '''
+
 [[plugins]]
 repo = 'vimlab/split-term.vim'
 
@@ -64,20 +65,27 @@ repo = 'mxw/vim-jsx'
 repo = 'jelera/vim-javascript-syntax'
 
 [[plugins]]
-repo = 'godlygeek/tabular'
-
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
+repo = 'posva/vim-vue'
 hook_add = '''
-  let g:vim_markdown_conceal = 0
-  let g:vim_markdown_conceal_code_blocks = 0
-  let g:vim_markdown_folding_disabled = 0
-  let g:vim_markdown_folding_level = 6
-  let g:vim_markdown_new_list_item_indent = 2
+  autocmd FileType vue syntax sync fromstart
 '''
 
+# [[plugins]]
+# repo = 'plasticboy/vim-markdown'
+# hook_add = '''
+#   let g:vim_markdown_conceal = 0
+#   let g:vim_markdown_conceal_code_blocks = 0
+#   let g:vim_markdown_folding_disabled = 0
+#   let g:vim_markdown_folding_level = 6
+#   let g:vim_markdown_new_list_item_indent = 2
+# '''
+
 [[plugins]]
-repo = 'vim-jp/cpp-vim'
+repo = 'tpope/vim-markdown'
+hook_add = '''
+  let g:markdown_fenced_languages = ['html', 'css', 'scss', 'javascript', 'python', 'bash=sh', 'php']
+  let g:markdown_syntax_conceal = 0
+'''
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -85,7 +93,9 @@ hook_add = '''
   let g:vim_json_syntax_conceal = 0
 '''
 
-# PHP.
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
 [[plugins]]
 repo = 'shawncplus/phpcomplete.vim'
 
@@ -101,6 +111,9 @@ repo = 'Shougo/neosnippet-snippets'
 hook_add = '''
   let g:neosnippet#enable_snipmate_compatibility = 1
   let g:neosnippet#snippets_directory='~/.cache/dein/repos/github.com/yama-dev/neosnippet-frontend-snippets/neosnippets'
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
   \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 '''
@@ -157,19 +170,10 @@ hook_add = '''
 [[plugins]]
 repo = 't9md/vim-textmanip'
 hook_add = '''
-  xmap <M-d> <Plug>(textmanip-duplicate-down)
-  nmap <M-d> <Plug>(textmanip-duplicate-down)
-  xmap <M-D> <Plug>(textmanip-duplicate-up)
-  nmap <M-D> <Plug>(textmanip-duplicate-up)
-
-  xmap <C-j> <Plug>(textmanip-move-down)
-  xmap <C-k> <Plug>(textmanip-move-up)
-  xmap <C-h> <Plug>(textmanip-move-left)
-  xmap <C-l> <Plug>(textmanip-move-right)
-
-  " toggle insert/replace with <F10>
-  nmap <F10> <Plug>(textmanip-toggle-mode)
-  xmap <F10> <Plug>(textmanip-toggle-mode)
+  " xmap <C-j> <Plug>(textmanip-move-down)
+  " xmap <C-k> <Plug>(textmanip-move-up)
+  " xmap <C-h> <Plug>(textmanip-move-left)
+  " xmap <C-l> <Plug>(textmanip-move-right)
 
   " use allow key to force replace movement
   xmap  <Up>     <Plug>(textmanip-move-up-r)
@@ -223,15 +227,15 @@ noremap <Leader>l :Tagbar<CR>
 
 # colorscheme.
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'Haron-Prime/Antares'
 hook_add = '''
-"  colorscheme tender
+  colorscheme Antares
 '''
 
 [[plugins]]
-repo = 'trusktr/seti.vim'
+repo = 'jacoborus/tender.vim'
 hook_add = '''
-"  colorscheme seti
+"  colorscheme tender
 '''
 
 [[plugins]]
@@ -244,11 +248,5 @@ hook_add = '''
 repo = 'zaki/zazen'
 hook_add = '''
 "  colorscheme zazen
-'''
-
-[[plugins]]
-repo = 'Haron-Prime/Antares'
-hook_add = '''
-  colorscheme Antares
 '''
 
