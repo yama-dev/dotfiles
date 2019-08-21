@@ -153,10 +153,11 @@ set foldmethod=manual
 
 " Set Syntax.
 set conceallevel=0
-set synmaxcol=500
+set synmaxcol=300
 
 " Display current line.
 set cursorline
+set cursorcolumn
 
 " set list
 set listchars=tab:>-,extends:<,trail:-,eol:<
@@ -168,6 +169,14 @@ set viminfo+=n~/.vim/viminfo
 
 set spell
 set spelllang=en,cjk
+
+set autoread
+
+set virtualedit=onemore
+
+set visualbell
+
+set showmatch
 
 " file type setting
 augroup AutoCmdFiletype
