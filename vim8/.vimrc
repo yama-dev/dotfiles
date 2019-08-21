@@ -207,17 +207,14 @@ map <F11> :ToggleFullScreen<CR>
 nnoremap / /\v
 nnoremap <C-g> :vim **/* \| cw
 nnoremap <C-g>f :/\( \\| \)
-nnoremap <C-g>js :vim **/*.es6 \| cw
-nnoremap <C-g>html :vim **/*.html \| cw
-nnoremap <C-g>css :vim **/*.scss \| cw
-nnoremap <C-h> :%s;;;gc
+nnoremap <Leader>h :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
 
 " Grep.
 autocmd QuickFixCmdPost *grep* cwindow
 
 " Open new tab.
-noremap <Leader>t :tabnew<CR>
+nnoremap <Leader>t :tabnew<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
@@ -230,13 +227,21 @@ nnoremap gk k
 nnoremap <C-f> 20j
 nnoremap <C-b> 20k
 
-noremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
-nnoremap H ^
-nnoremap L $
-vnoremap H ^
-vnoremap L g_
+nnoremap <C-h> ^
+nnoremap <C-l> g_
+
+vnoremap <C-j> 10j
+vnoremap <C-k> 10k
+vnoremap <C-h> ^
+vnoremap <C-l> g_
+
+inoremap <C-j> <ESC>10ja
+inoremap <C-k> <ESC>10ka
+inoremap <C-h> <ESC>10ha
+inoremap <C-l> <ESC>10la
 
 " Not register overwrite.
 xnoremap s "_s
