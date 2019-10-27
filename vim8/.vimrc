@@ -205,7 +205,8 @@ map <F11> :ToggleFullScreen<CR>
 
 " Settings For Search and Replace.
 nnoremap / /\v
-nnoremap <C-g> :vim **/* \| cw
+nnoremap <C-g> :vimgrep **/* \| cw
+nnoremap <C-g>g :vimgrep /^.*js\-.*js.*$/ **/*.js | cw
 nnoremap <C-g>f :/\( \\| \)
 nnoremap <Leader>h :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
