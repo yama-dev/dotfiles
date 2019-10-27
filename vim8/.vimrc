@@ -295,3 +295,11 @@ augroup END
 " Vim :w Use HHKB
 map ; :
 
+set ttimeoutlen=50
+
+nnoremap Zz :w<CR>:bd<CR>
+
+augroup vimrc-highlight
+  autocmd!
+  autocmd Syntax sql if 1000 < line('$') | syntax sync minlines=100 | endif
+augroup END
