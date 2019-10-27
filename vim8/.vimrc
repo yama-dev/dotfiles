@@ -190,6 +190,11 @@ augroup AutoCmdFiletype
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 augroup END
 
+" Grep Settings.
+set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git\ --exclude-dir=node_modules
+autocmd QuickfixCmdPost vimgrep copen
+autocmd QuickfixCmdPost grep copen
+
 "--------------------------------------------------
 " Settings key-bind.
 
