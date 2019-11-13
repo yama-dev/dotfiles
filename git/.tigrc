@@ -1,0 +1,23 @@
+# .tigrc
+
+# views.
+set main-view  = line-number:yes,interval=1 id date author:email-user commit-title:graph=yes,refs=yes
+set blame-view = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+set pager-view = line-number:yes,interval=1 text
+set stage-view = line-number:yes,interval=1 text
+set log-view   = line-number:yes,interval=1 text
+set blob-view  = line-number:yes,interval=1 text
+set diff-view  = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+# split.
+set vertical-split = yes
+
+# tab size.
+set tab-size = 2
+
+# enable mouse.
+set mouse = true
+
+# diff-context show line.
+set diff-context = 2
+
