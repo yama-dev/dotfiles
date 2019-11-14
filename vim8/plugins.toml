@@ -6,11 +6,6 @@ repo = 'roxma/vim-hug-neovim-rpc'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-on_source = 'denite.nvim'
-on_path = '.*'
-
 [[plugins]] # Yank
 repo = 'Shougo/neoyank.vim'
 on_source = 'denite.nvim'
