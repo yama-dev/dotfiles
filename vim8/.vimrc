@@ -309,3 +309,11 @@ augroup vimrc-highlight
   autocmd!
   autocmd Syntax sql if 1000 < line('$') | syntax sync minlines=100 | endif
 augroup END
+
+" hilight in comment.
+augroup HilightsForce
+  autocmd!
+  autocmd WinEnter,BufRead,BufNew,Syntax * :silent! call matchadd('Todo', '\(TODO\|NOTE\|INFO\|XXX\|TASK\|TEMP\):')
+  autocmd WinEnter,BufRead,BufNew,Syntax * highlight Todo guibg=Red guifg=White
+augroup END
+
