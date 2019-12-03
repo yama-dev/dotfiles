@@ -13,11 +13,13 @@ set diff-view  = line-number:yes,interval=1 text:yes,commit-title-overflow=no
 set vertical-split = yes
 
 # tab size.
-set tab-size = 2
+set tab-size = 1
 
 # enable mouse.
 set mouse = true
 
 # diff-context show line.
-set diff-context = 2
+set diff-context = 1
+
+bind status P !git push origin
 
