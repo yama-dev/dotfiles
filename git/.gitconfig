@@ -29,3 +29,10 @@
   d5 = diff HEAD~~~~~
   d10 = diff HEAD~~~~~~~~~~
 
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+
