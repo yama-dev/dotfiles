@@ -16,4 +16,9 @@ alias grepa='grep --color=auto -r --exclude-dir={node_modules,.git} --line-numbe
 alias grepl='grep --color=auto -r -l --exclude-dir={node_modules,.git} --line-number --with-filename'
 alias grepc='grep --count --color=auto -r --exclude-dir={node_modules,.git} --line-number --with-filename'
 
+# find
+function finda(){
+  find ./ -type d \( -name 'node_modules' -o -name '.git' \) -prune -o -type f -name $1 -print
+}
+
 
