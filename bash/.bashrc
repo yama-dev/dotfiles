@@ -21,4 +21,18 @@ function finda(){
   find ./ -type d \( -name 'node_modules' -o -name '.git' \) -prune -o -type f -name $1 -print
 }
 
+##########
+# For Windows.
+##########
+
+# open
+alias open="explorer"
+
+# ping
+function wincmd() {
+  CMD=$1
+  shift
+  $CMD $* 2>&1 | iconv -f cp932 -t utf-8
+}
+alias ping='wincmd ping'
 
