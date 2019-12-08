@@ -29,7 +29,7 @@ if &compatible
   set nocompatible
 endif
 
-" 設定ディレクトリ
+" set directory.
 let s:vim_dir = $VIM
 let s:home_dir = $HOME
 
@@ -50,16 +50,13 @@ if dein#load_state(s:home_dir . '/.cache/dein')
 
   call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
 
-  " プラグインリストを読み込みキャッシュする
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  " Required:
   call dein#end()
   call dein#save_state()
 endif
 
-" Required:
 filetype plugin indent on
 syntax enable
 
@@ -316,4 +313,9 @@ augroup HilightsForce
   autocmd WinEnter,BufRead,BufNew,Syntax * :silent! call matchadd('Todo', '\(TODO\|NOTE\|INFO\|XXX\|TASK\|TEMP\):')
   autocmd WinEnter,BufRead,BufNew,Syntax * highlight Todo guibg=Red guifg=White
 augroup END
+
+"--------------------------------------------------
+
+" Import
+source $HOME/startify.vim
 
