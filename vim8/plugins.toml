@@ -224,6 +224,9 @@ hook_add = '''
   noremap <Space>l :Tagbar<CR>
 '''
 
+[[plugins]]
+repo = 'mhinz/vim-startify'
+
 # colorscheme.
 [[plugins]]
 repo = 'Haron-Prime/Antares'
