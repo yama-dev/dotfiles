@@ -227,6 +227,14 @@ hook_add = '''
 [[plugins]]
 repo = 'mhinz/vim-startify'
 
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+  nmap * <Plug>(quickhl-manual-this)
+  xmap * <Plug>(quickhl-manual-this)
+  nmap <ESC>* <Plug>(quickhl-manual-reset)
+'''
+
 # colorscheme.
 [[plugins]]
 repo = 'Haron-Prime/Antares'
