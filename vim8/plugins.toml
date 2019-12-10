@@ -235,6 +235,12 @@ hook_add = '''
   nmap <ESC>* <Plug>(quickhl-manual-reset)
 '''
 
+[[plugins]]
+repo = 'mbbill/undotree'
+hook_add = '''
+  nnoremap U :UndotreeToggle<CR>
+'''
+
 # colorscheme.
 [[plugins]]
 repo = 'Haron-Prime/Antares'
