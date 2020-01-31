@@ -187,6 +187,7 @@ augroup AutoCmdFiletype
   autocmd!
   autocmd FileType html,markdown set synmaxcol=250
   autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
+  autocmd BufRead,BufNewFile,BufReadPre *.jsx set filetype=javascript.jsx
   autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
   autocmd BufRead,BufNewFile,BufReadPre *.es6 set filetype=javascript
   autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
