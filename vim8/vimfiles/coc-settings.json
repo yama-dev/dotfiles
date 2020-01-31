@@ -1,9 +1,39 @@
 {
-  "suggest.snippetIndicator": "->",
-  "css.filetypes": [
-    "css",
-    "less",
-    "scss",
-    "sass"
-  ]
+  "suggest": {
+    "snippetIndicator": "->"
+  },
+  "css": {
+    "filetypes": [
+      "css",
+      "less",
+      "scss",
+      "sass"
+    ]
+  },
+  "tsserver": {
+    "enableJavascript": true
+  },
+  "eslint": {
+    "filetypes": [
+      "javascript",
+      "typescript", 
+      "typescriptreact", 
+      "javascriptreact", 
+      "typescript.tsx"
+    ]
+  },
+  "list": {
+    "maxHeight": 20
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2, 
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "semi": true,
+    "useTabs": false,
+    "arrowParens": "avoid"
+  }
 }
