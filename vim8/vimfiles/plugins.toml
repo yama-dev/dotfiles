@@ -64,10 +64,23 @@ on_ft = ['css','scss','sass','less']
 repo = 'othree/yajs.vim'
 
 [[plugins]]
-repo = 'mxw/vim-jsx'
+repo = 'HerringtonDarkholme/yats.vim'
 
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
+repo = 'alampros/vim-styled-jsx'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'moll/vim-node'
+on_ft = ['javascript']
 
 [[plugins]]
 repo = 'posva/vim-vue'
@@ -99,22 +112,10 @@ repo = 'nelsyeung/twig.vim'
 
 # Snippet.
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
+repo = 'honza/vim-snippets'
 
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-hook_add = '''
-  let g:neosnippet#enable_snipmate_compatibility = 1
-  let g:neosnippet#snippets_directory='~/.cache/dein/repos/github.com/yama-dev/neosnippet-frontend-snippets/neosnippets'
-  imap <C-k> <Plug>(neosnippet_expand_or_jump)
-  smap <C-k> <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k> <Plug>(neosnippet_expand_target)
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-'''
-
-[[plugins]]
-repo = 'yama-dev/neosnippet-frontend-snippets'
+# [[plugins]]
+# repo = 'yama-dev/neosnippet-frontend-snippets'
 
 # StatusLine.
 [[plugins]]
@@ -157,6 +158,17 @@ repo = 'cespare/vim-toml'
 hook_add = '''
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 '''
+
+# toml.
+[[plugins]]
+repo = 'slim-template/vim-slim'
+hook_add = '''
+  autocmd BufRead,BufNewFile *.slim setfiletype slim
+'''
+
+# # styled-components.
+# [[plugins]]
+# repo = 'styled-components/vim-styled-components'
 
 # Format.
 [[plugins]]
@@ -217,7 +229,7 @@ repo = 'majutsushi/tagbar'
 hook_add = '''
   set tags=tags;
   let g:tagbar_left = 0
-  let g:tagbar_width = 100
+  let g:tagbar_width = 60
   let g:tagbar_autoclose = 0
   let g:tagbar_autofocus = 0
   let g:tagbar_show_linenumbers = 1
