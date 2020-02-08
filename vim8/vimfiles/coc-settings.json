@@ -13,6 +13,9 @@
   "tsserver": {
     "enableJavascript": true
   },
+  "tslint": {
+    "jsEnable": true
+  },
   "eslint": {
     "filetypes": [
       "javascript",
