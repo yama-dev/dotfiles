@@ -250,6 +250,16 @@ hook_add = '''
   nnoremap U :UndotreeToggle<CR>
 '''
 
+# JSDoc
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+hook_add = '''
+  let g:jsdoc_allow_input_prompt=1
+  let g:jsdoc_input_description=1
+  let g:jsdoc_enable_es6=1
+  nnoremap <Space>j :JsDoc<CR>
+'''
+
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_add = '''
