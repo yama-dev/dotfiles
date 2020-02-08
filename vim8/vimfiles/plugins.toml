@@ -166,10 +166,6 @@ hook_add = '''
   autocmd BufRead,BufNewFile *.slim setfiletype slim
 '''
 
-# # styled-components.
-# [[plugins]]
-# repo = 'styled-components/vim-styled-components'
-
 # Format.
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
