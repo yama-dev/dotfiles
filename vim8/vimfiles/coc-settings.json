@@ -26,10 +26,10 @@
     "maxHeight": 20
   },
   "prettier": {
-    "printWidth": 100,
+    "printWidth": 120,
     "tabWidth": 2, 
     "singleQuote": true,
-    "trailingComma": "es5",
+    "trailingComma": "none",
     "bracketSpacing": true,
     "jsxBracketSameLine": false,
     "semi": true,
