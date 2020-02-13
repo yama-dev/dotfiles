@@ -75,6 +75,10 @@ repo = 'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx']
 
