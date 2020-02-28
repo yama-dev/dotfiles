@@ -218,7 +218,7 @@ nnoremap / /\v
 nnoremap <C-g> :vimgrep **/* \| cw
 nnoremap <C-g>g :vimgrep /^.*js\-.*js.*$/ **/*.js | cw
 nnoremap <C-g>f :/\( \\| \)
-nnoremap <Leader>h :%s;;;gc
+nnoremap <C-h> :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
 
 " Grep.
