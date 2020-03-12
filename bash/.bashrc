@@ -10,6 +10,9 @@ alias l='ls -CF'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
+# ripgrep
+alias rgf='rg --files | rg'
+
 alias 'curl_header=curl -D - -s -o /dev/null'
 
 # grep
