@@ -67,6 +67,9 @@ fi
 if [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
 echo Windows
 
+# vim
+alias vim='gvim -u NONE'
+
 # export FORCE_COLOR=true
 FORCE_COLOR=true
 
