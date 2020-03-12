@@ -25,6 +25,9 @@ function finda(){
   find ./ -type d \( -name 'node_modules' -o -name '.git' \) -prune -o -type f -name $1 -print
 }
 
+# vi
+alias vi='vim -u NONE -N'
+
 # git
 alias g='git'
 alias ga='git add'
