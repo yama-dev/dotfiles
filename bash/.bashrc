@@ -38,6 +38,9 @@ alias gc='git commit'
 alias gf='git fetch'
 alias gp='git push'
 
+# dotfiles
+alias dotfiles='gvim ~/'
+
 ##########
 # For Mac.
 ##########
