@@ -25,6 +25,19 @@ function finda(){
   find ./ -type d \( -name 'node_modules' -o -name '.git' \) -prune -o -type f -name $1 -print
 }
 
+# git
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+alias gst='git status'
+alias gb='git branch'
+alias gba='git fetch && git branch -a'
+alias gch='git checkout'
+alias gc='git commit'
+alias gf='git fetch'
+alias gp='git push'
+
 ##########
 # For Mac.
 ##########
