@@ -23,6 +23,15 @@ function finda(){
 }
 
 ##########
+# For Linux.
+##########
+
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+echo Linux
+
+fi
+
+##########
 # For Windows.
 ##########
 
