@@ -23,6 +23,16 @@ function finda(){
 }
 
 ##########
+# For Mac.
+##########
+
+if [ "$(uname)" == "Darwin" ]; then
+
+echo Mac
+
+fi
+
+##########
 # For Linux.
 ##########
 
