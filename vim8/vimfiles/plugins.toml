@@ -90,6 +90,7 @@ on_ft = ['javascript']
 repo = 'posva/vim-vue'
 hook_add = '''
   autocmd FileType vue syntax sync fromstart
+  let g:vue_pre_processors = ['pug', 'scss']
 '''
 
 [[plugins]]
@@ -207,8 +208,6 @@ hook_add = '''
 
   let g:multi_cursor_start_word_key      = '<C-n>'
   let g:multi_cursor_select_all_word_key = '<A-n>'
-  let g:multi_cursor_start_key           = 'g<C-n>'
-  let g:multi_cursor_select_all_key      = 'g<A-n>'
   let g:multi_cursor_next_key            = '<C-n>'
   let g:multi_cursor_prev_key            = '<C-p>'
   let g:multi_cursor_skip_key            = '<C-x>'
