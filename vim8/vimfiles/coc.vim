@@ -4,10 +4,10 @@
 nmap <silent> <leader><leader> :<C-u>CocList<CR>
 
 " Show commands
-nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
 
 " Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
 
 " Search workspace symbols
 nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
@@ -50,7 +50,7 @@ nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 "スペースhでHover
-nmap <silent> <leader>h :<C-u>call CocAction('doHover')<CR>
+nmap <silent> <leader>ch :<C-u>call CocAction('doHover')<CR>
 
 "スペースdfでDefinition
 nmap <silent> <leader>df <Plug>(coc-definition)
