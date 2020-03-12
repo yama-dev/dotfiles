@@ -26,6 +26,15 @@ function finda(){
 # For Windows.
 ##########
 
+if [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
+echo Windows
+
+# export FORCE_COLOR=true
+FORCE_COLOR=true
+
+# tree
+alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/|  /g'"
+
 # open
 alias open="explorer"
 
