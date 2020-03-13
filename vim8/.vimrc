@@ -322,7 +322,11 @@ nnoremap Zz :w<CR>:bd<CR>
 augroup vimrc-highlight
   autocmd!
   autocmd Syntax sql if 1000 < line('$') | syntax sync minlines=100 | endif
+  autocmd Syntax php if 1000 < line('$') | syntax sync minlines=100 | endif
 augroup END
+
+set lazyredraw
+set ttyfast
 
 " hilight in comment.
 augroup HilightsForce
