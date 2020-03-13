@@ -160,8 +160,8 @@ set conceallevel=0
 set synmaxcol=300
 
 " Display current line.
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 " set list
 set listchars=tab:>-,extends:<,trail:-,eol:<
