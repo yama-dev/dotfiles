@@ -331,6 +331,9 @@ augroup HilightsForce
   autocmd WinEnter,BufRead,BufNew,Syntax * highlight Todo guibg=Red guifg=White
 augroup END
 
+" remove new-line auto commentout.
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " remove line-end space.
 autocmd BufWritePre * :%s/\s\+$//ge
 
