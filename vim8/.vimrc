@@ -195,11 +195,6 @@ augroup AutoCmdFiletype
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 augroup END
 
-" Grep Settings.
-set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git\ --exclude-dir=node_modules
-autocmd QuickfixCmdPost vimgrep copen
-autocmd QuickfixCmdPost grep copen
-
 "--------------------------------------------------
 " Settings key-bind.
 
@@ -273,6 +268,20 @@ vnoremap <Leader>ds  :s/\s\+//gc<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
+"--------------------------------------------------
+" Grep Settings.
+set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git\ --exclude-dir=node_modules
+autocmd QuickfixCmdPost vimgrep copen
+autocmd QuickfixCmdPost grep copen
+
+" ripgrep
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+command! -nargs=* -complete=file Rg :tabnew | :silent grep --sort-files <args>
+command! -nargs=* -complete=file Rgg :tabnew | :silent grep <args>
 
 "--------------------------------------------------
 " Settings For Terminal.
