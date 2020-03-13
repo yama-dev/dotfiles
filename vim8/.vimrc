@@ -328,4 +328,6 @@ augroup END
 source $HOME/vimfiles/startify.vim
 source $HOME/vimfiles/coc.vim
 source $HOME/vimfiles/js_file_open.vim
+source $HOME/vimfiles/vimrc-auto-cursorline.vim
+
 
