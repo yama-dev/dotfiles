@@ -331,6 +331,9 @@ augroup HilightsForce
   autocmd WinEnter,BufRead,BufNew,Syntax * highlight Todo guibg=Red guifg=White
 augroup END
 
+" remove line-end space.
+autocmd BufWritePre * :%s/\s\+$//ge
+
 "--------------------------------------------------
 
 " Import
