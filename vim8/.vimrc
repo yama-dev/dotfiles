@@ -188,6 +188,21 @@ set visualbell
 
 set showmatch
 
+" scroll offset.
+set scrolloff=3
+
+" enable backspace.
+set backspace=indent,eol,start
+
+" remove scroll bar.
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+set guioptions-=b
+
+set nowrap
+
 " file type setting
 augroup AutoCmdFiletype
   autocmd!
