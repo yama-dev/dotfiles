@@ -153,7 +153,13 @@ if has('ambiwidth')
 endif
 
 " Set Fold.
-set foldmethod=manual
+set foldmethod=marker
+" manual: 手動で折畳を定義する
+" indent: インデントの数を折畳のレベル(深さ)とする
+" expr:   折畳を定義する式を指定する
+" syntax: 構文強調により折畳を定義する
+" diff:   変更されていないテキストを折畳対象とする
+" marker: テキスト中の印で折畳を定義する
 
 " Set Syntax.
 set conceallevel=0
