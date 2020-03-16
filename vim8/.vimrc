@@ -153,7 +153,7 @@ if has('ambiwidth')
 endif
 
 " Set Fold.
-set foldmethod=marker
+set foldmethod=manual
 " manual: 手動で折畳を定義する
 " indent: インデントの数を折畳のレベル(深さ)とする
 " expr:   折畳を定義する式を指定する
