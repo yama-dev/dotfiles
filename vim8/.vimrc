@@ -201,7 +201,7 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set nowrap
+set wrap
 
 " file type setting
 augroup AutoCmdFiletype
