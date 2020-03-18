@@ -292,6 +292,15 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 inoremap jj <Esc>
 
+" Checkout IME-mode.
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+nnoremap <silent><expr> * v:count ? '*'
+\ : ':sil exe "keepj norm! *" <Bar> call winrestview(' . string(winsaveview()) . ')<CR>'
+
+" vnoremap < <gv
+" vnoremap > >gv
+
 "--------------------------------------------------
 " Grep Settings.
 set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git\ --exclude-dir=node_modules
