@@ -1,5 +1,10 @@
 " vimrc
 
+" reset augroup
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
 "--------------------------------------------------
 " Import
 
@@ -67,7 +72,7 @@ endif
 filetype plugin indent on
 syntax enable
 
-if dein#check_install()
+if has('vim_starting') && dein#check_install()
  call dein#install()
 endif
 
@@ -363,7 +368,7 @@ set ttimeoutlen=50
 
 nnoremap Zz :w<CR>:bd<CR>
 
-augroup vimrc-highlight
+augroup AutoCmdhighlight
   autocmd!
   autocmd Syntax sql if 1000 < line('$') | syntax sync minlines=100 | endif
   autocmd Syntax php if 1000 < line('$') | syntax sync minlines=100 | endif
@@ -393,4 +398,5 @@ source $HOME/vimfiles/coc.vim
 source $HOME/vimfiles/js_file_open.vim
 source $HOME/vimfiles/vimrc-auto-cursorline.vim
 
+nnoremap <F12> :edit $MYVIMRC<CR>
 
