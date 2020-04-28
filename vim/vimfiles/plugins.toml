@@ -28,6 +28,39 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 merged = '0'
 
+# Interface.
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+"  autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+noremap <silent> <Space>f :NERDTreeToggle<CR>
+'''
+
+# Indent view.
+# [[plugins]]
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+#   let g:indentLine_faster = 1
+# '''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+  let g:indent_guides_guide_size = 1
+  let g:indent_guides_start_level = 2
+
+" " change color.
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+'''
+
 [[plugins]]
 repo = 'thinca/vim-qfreplace'
 
