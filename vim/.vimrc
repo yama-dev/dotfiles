@@ -2,7 +2,7 @@
 
 " reset augroup
 augroup MyAutoCmd
-  autocmd!
+autocmd!
 augroup END
 
 "--------------------------------------------------
@@ -59,8 +59,6 @@ if dein#load_state(s:dein_dir)
   " plugin toml file.
   let s:toml = s:home_dir . '/vimfiles/plugins.toml'
   let s:lazy_toml = s:home_dir . '/vimfiles/plugins_lazy.toml'
-
-  call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
 
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
