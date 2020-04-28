@@ -1,3 +1,5 @@
+# :call dein#recache_runtimepath()
+
 # denite.
 [[plugins]]
 repo = 'Shougo/denite.nvim'
