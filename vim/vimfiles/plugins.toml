@@ -281,12 +281,9 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 't9md/vim-choosewin'
+repo = 'luochen1990/rainbow'
 hook_add = '''
-  " mapping
-  nmap - <Plug>(choosewin)
-  let g:choosewin_overlay_enable = 1
-  let g:choosewin_overlay_clear_multibyte = 1
+let g:rainbow_active=0
 '''
 
 # colorscheme.

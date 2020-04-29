@@ -17,6 +17,8 @@
     "jsEnable": true
   },
   "eslint": {
+    "packageManager": "npm",
+    "autoFixOnSave": false,
     "filetypes": [
       "javascript",
       "typescript",
@@ -26,7 +28,7 @@
     ]
   },
   "list": {
-    "maxHeight": 20
+    "maxHeight": 30
   },
   "prettier": {
     "printWidth": 120,
