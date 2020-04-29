@@ -30,13 +30,17 @@ merged = '0'
 
 # Interface.
 [[plugins]]
-repo = 'preservim/nerdtree'
-hook_add = '''
-"  autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+repo = 'Shougo/unite.vim'
 
-noremap <silent> <Space>f :NERDTreeToggle<CR>
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+hook_add = '''
+let g:vimfiler_as_default_explorer=1
+let g:vimfiler_safe_mode_by_default=0
+let g:vimfiler_enable_auto_cd=1
+"オプション -simple
+noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=50 -toggle -no-quit<CR>
 '''
 
 # Indent view.
