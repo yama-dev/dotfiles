@@ -163,10 +163,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'alvan/vim-closetag'
-
-
-[[plugins]]
 repo = 'tikhomirov/vim-glsl'
 
 # Git.
@@ -323,3 +319,4 @@ repo = 'danishprakash/vim-yami'
 hook_add = '''
 "  au MyAutoCmd VimEnter * nested colorscheme yami
 '''
+

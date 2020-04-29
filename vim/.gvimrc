@@ -34,7 +34,7 @@ elseif has('mac')
   set antialias
 
   " Set Transparency.
-  set transparency=8	
+  set transparency=8
 endif
 
 " 日本語入力に関する設定
