@@ -18,6 +18,7 @@ if IsWindows()
   else
     set runtimepath+=$VIM
     set pythonthreedll=$VIM/python3/python37.dll
+    set ambiwidth=double
   endif
 endif
 
@@ -180,8 +181,8 @@ set listchars=tab:>-,extends:<,trail:-,eol:<
 set viminfo='20,f1,<500,s100,h,%
 set viminfo+=n~/.vim/viminfo
 
-set spell
-set spelllang=en,cjk
+" set spell
+" set spelllang=en,cjk
 
 set autoread
 
