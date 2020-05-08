@@ -48,5 +48,18 @@
       "disableWorkspaceFolders": true,
       "filetypes": ["go"]
     }
+  },
+  "markdownlint.config": {
+    "no-trailing-spaces": {
+      "br_spaces": 2
+    },
+    "no-multiple-blanks": {
+      "maximum": 3
+    },
+    "no-bare-urls": false,
+    "line-length": {
+      "line_length": 300
+    },
+    "no-emphasis-as-heading": false
   }
 }
