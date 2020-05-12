@@ -27,6 +27,35 @@ on_event = 'TextYankPost'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 merged = '0'
+hook_add = '''
+let g:coc_global_extensions = [
+  \ 'coc-browser',
+  \ 'coc-calc',
+  \ 'coc-cmake',
+  \ 'coc-css',
+  \ 'coc-emmet',
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-floaterm',
+  \ 'coc-git',
+  \ 'coc-go',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-lists',
+  \ 'coc-markdownlint',
+  \ 'coc-powershell',
+  \ 'coc-prettier',
+  \ 'coc-rls',
+  \ 'coc-snippets',
+  \ 'coc-template',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-vimlsp',
+  \ 'coc-xml',
+  \ 'coc-yaml',
+  \ 'coc-yank',
+  \ ]
+'''
 
 # Interface.
 [[plugins]]
