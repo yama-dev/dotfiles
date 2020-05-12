@@ -138,9 +138,6 @@ repo = 'danishprakash/vim-docker'
 [[plugins]]
 repo = 'honza/vim-snippets'
 
-# [[plugins]]
-# repo = 'yama-dev/neosnippet-frontend-snippets'
-
 # StatusLine.
 [[plugins]]
 repo = 'vim-airline/vim-airline'
