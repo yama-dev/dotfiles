@@ -158,8 +158,9 @@ hook_add = '''
 [[plugins]]
 repo = 'vim-jp/cpp-vim'
 
+# php
 [[plugins]]
-repo = 'shawncplus/phpcomplete.vim'
+repo = 'sudar/vim-wordpress-snippets'
 
 [[plugins]]
 repo = 'nelsyeung/twig.vim'

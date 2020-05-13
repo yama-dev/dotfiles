@@ -61,5 +61,8 @@
       "line_length": 300
     },
     "no-emphasis-as-heading": false
+  },
+  "snippets.extends": {
+    "php": ["php", "wordpress"]
   }
 }
