@@ -397,5 +397,6 @@ source $HOME/vimfiles/coc.vim
 source $HOME/vimfiles/js_file_open.vim
 source $HOME/vimfiles/vimrc-auto-cursorline.vim
 
+" nnoremap <F12> :edit $HOME<CR>
 nnoremap <F12> :edit $MYVIMRC<CR>
 
