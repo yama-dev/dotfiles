@@ -25,6 +25,12 @@ endfunction
 " Toggle Fullscreen.
 command! -nargs=0 ToggleFullScreen call ToggleFullScreen()
 function! ToggleFullScreen()
+
+  if filereadable(expand("$HOME/.vimrc"))
+    echo $HOME.'/.vimrc'
+    echo expand("$HOME/.vimrc")
+  endif
+
   if has('nvim')
     if g:GuiWindowMaximized == 0
       call GuiWindowMaximized(1)
