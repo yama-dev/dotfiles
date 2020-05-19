@@ -185,39 +185,19 @@ hook_add = '''
     \ ]
 '''
 
-# HTML.
-[[plugins]]
-repo = 'mattn/emmet-vim'
-hook_add = '''
-  let g:user_emmet_leader_key='<C-e>'
-  let g:user_emmet_settings={"variables":{"lang":"ja"}}
-'''
-
-[[plugins]]
-repo = 'tikhomirov/vim-glsl'
-
 # Git.
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=250
+  let g:gitgutter_max_signs = 500
+  let g:gitgutter_map_keys = 0
+  let g:gitgutter_highlight_lines = 0
+  let g:gitgutter_override_sign_column_highlight = 0
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-# toml.
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-hook_add = '''
-  autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
-'''
-
-# toml.
-[[plugins]]
-repo = 'slim-template/vim-slim'
-on_ft = 'slim'
-hook_add = '''
-  autocmd BufRead,BufNewFile *.slim setfiletype slim
-'''
 
 # Format.
 [[plugins]]
