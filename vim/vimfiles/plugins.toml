@@ -69,11 +69,21 @@ repo = 'Shougo/unite.vim'
 repo = 'Shougo/vimfiler.vim'
 depends = 'unite.vim'
 hook_add = '''
-let g:vimfiler_as_default_explorer=1
-let g:vimfiler_safe_mode_by_default=0
-let g:vimfiler_enable_auto_cd=1
-"オプション -simple
-noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=50 -toggle -no-quit<CR>
+  let g:vimfiler_as_default_explorer=1
+  let g:vimfiler_safe_mode_by_default=0
+  let g:vimfiler_enable_auto_cd=1
+  "option -simple
+  noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=50 -toggle -no-quit<CR>
+'''
+
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+depends = 'unite.vim'
+hook_add = '''
+  let g:unite_colorscheme_blacklist = [
+    \ 'blue', 'darkblue', 'delek', 'evening', 'koehler', 'morning', 'industry',
+    \ 'shine', 'murphy', 'pablo', 'peachpuff', 'ron', 'slate', 'zellner']
+  " :Unite colorscheme -auto-preview
 '''
 
 # Indent view.
