@@ -23,3 +23,10 @@ set diff-context = 1
 
 bind status P !git push origin
 
+# reset hard
+bind status <Ctrl-r> ?git reset --hard HEAD
+
+# checkout -b
+bind branch B ?git checkout -b "%(prompt Enter new branch name:)" %(branch)
+bind main   B ?git checkout -b "%(prompt Enter new branch name: )"
+
