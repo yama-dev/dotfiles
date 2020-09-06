@@ -1,0 +1,3 @@
+--langmap=JavaScript:+.es.es6.es7.vue
+
+--regex-javascript=/\/\/[ \t]*(FIXME|TODO|TASK)[ \t]*\:*(.*)/\1:\2/C/
