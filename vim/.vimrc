@@ -18,7 +18,6 @@ if IsWindows()
   else
     set runtimepath+=$VIM
     set pythonthreedll=$VIM/python3/python37.dll
-    set ambiwidth=double
   endif
 endif
 
@@ -110,6 +109,8 @@ set lines=50
 
 " Line Number.
 set number
+" set relativenumber
+
 
 " Command line.
 set cmdheight=3
@@ -152,9 +153,8 @@ if has('nvim')
 endif
 
 " For IME.
-if has('ambiwidth')
-  set ambiwidth=auto
-endif
+" set ambiwidth=single
+set ambiwidth=double
 
 " Set Fold.
 set foldmethod=manual
@@ -220,6 +220,10 @@ augroup AutoCmdFiletype
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
 augroup END
 
+set regexpengine=1
+set ttyfast
+set lazyredraw
+
 "--------------------------------------------------
 " Settings key-bind.
 
@@ -263,9 +267,6 @@ nnoremap <C-u> <C-u>zz
 
 nnoremap <C-h> ^
 nnoremap <C-l> g_
-
-vnoremap <C-j> 10j
-vnoremap <C-k> 10k
 vnoremap <C-h> ^
 vnoremap <C-l> g_
 

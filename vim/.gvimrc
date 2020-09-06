@@ -43,6 +43,6 @@ if has('multi_byte_ime') || has('xim')
   highlight CursorIM guibg=Red guifg=NONE
   " 挿入モード・検索モードでのデフォルトのIME状態設定
   set iminsert=0 imsearch=0
-  "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+  " inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 endif
 
