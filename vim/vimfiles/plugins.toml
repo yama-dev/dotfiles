@@ -29,6 +29,7 @@ rev = 'release'
 merged = '0'
 hook_add = '''
 let g:coc_global_extensions = [
+  \ 'https://github.com/jason-pomerleau/vscode-wordpress-toolbox',
   \ 'coc-browser',
   \ 'coc-calc',
   \ 'coc-cmake',
