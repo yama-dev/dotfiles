@@ -15,6 +15,38 @@ hook_add = '''
   let g:tagbar_autoclose = 0
   let g:tagbar_autofocus = 0
   let g:tagbar_show_linenumbers = 1
+  let g:tagbar_sort = 0
+  let g:tagbar_type_javascript = {
+  \  'ctagstype' : 'JavaScript',
+  \  'kinds' : [
+  \     'C:constants',
+  \     'c:classes',
+  \     'f:functions',
+  \     'm:methods',
+  \     'p:properties',
+  \     'v:global variables',
+  \     'g:generators'
+  \  ]
+  \}
+  let g:tagbar_type_html = {
+  \  'ctagstype' : 'Html',
+  \  'kinds' : [
+  \    'a:named anchors',
+  \    'h:H1 headings',
+  \    'i:H2 headings',
+  \    'j:H3 headings'
+  \  ]
+  \}
+  let g:tagbar_type_scss = {
+  \  'ctagstype' : 'css',
+  \  'kinds' : [
+  \    'v:variables',
+  \    'c:classes',
+  \    'i:identities',
+  \    't:tags',
+  \    'm:medias'
+  \  ]
+  \}
   noremap <Space>l :Tagbar<CR>
 '''
 
