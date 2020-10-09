@@ -13,7 +13,7 @@ alias vdir='vdir --color=auto'
 # ripgrep
 alias rgf='rg --files | rg'
 
-alias 'curl_header=curl -D - -s -o /dev/null'
+alias curl_header='curl -D - -s -o /dev/null'
 
 # grep
 alias grepa='grep --color=auto -r --exclude-dir={node_modules,.git} --line-number --with-filename'
