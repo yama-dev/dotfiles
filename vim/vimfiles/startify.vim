@@ -1,16 +1,26 @@
 " startify
-let g:startify_files_number = 5
-let g:startify_list_order = [
-  \ ['-> 最近使ったファイル:'],
-  \ 'files',
-  \ ['-> 最近使ったファイル(カレントディレクトリ下):'],
-  \ 'dir',
-  \ ['-> セッション:'],
-  \ 'sessions',
-  \ ['-> ブックマーク:'],
-  \ 'bookmarks',
+let g:startify_files_number = 3
+let g:startify_lists = [
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+  \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'files',     'header': ['   MRU']            },
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'commands',  'header': ['   Commands']       },
   \ ]
-let g:startify_bookmarks = ["~/.vimrc", "~/.gvimrc"]
+
+let g:startify_bookmarks = [
+  \ "~/",
+  \ "~/yama-dev/",
+  \ "~/yama-dev/work/",
+  \ "~/yama-dev/work/task.txt",
+  \ "~/.zprezto/runcoms/zprofile",
+  \ "~/.vimrc",
+  \ "~/.gvimrc",
+  \ "~/.vim/coc-settings.json",
+  \ "~/vimfiles/",
+  \ "~/vimfiles/plugins.toml",
+  \ "~/vimfiles/plugins_lazy.toml",
+  \ ]
 
 " ASCII ARTを真ん中寄せする
 " :h startifyを参照
