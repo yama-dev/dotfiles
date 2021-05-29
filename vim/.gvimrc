@@ -28,9 +28,8 @@ elseif has('mac')
   " for Mac
 
   " Font Setttings.
-  set guifont=Ricty:h15
-  set linespace=-1
-  set renderoptions=type:directx
+  set guifont=HackGenNerd:h16
+  set linespace=-5
   set antialias
 
   " Set Transparency.
