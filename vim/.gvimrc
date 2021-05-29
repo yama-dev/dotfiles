@@ -35,6 +35,8 @@ elseif has('mac')
 
   " Set Transparency.
   set transparency=8
+
+  inoremap <ESC> <ESC>:set iminsert=0<CR>
 endif
 
 " 日本語入力に関する設定
@@ -43,6 +45,5 @@ if has('multi_byte_ime') || has('xim')
   highlight CursorIM guibg=Red guifg=NONE
   " 挿入モード・検索モードでのデフォルトのIME状態設定
   set iminsert=0 imsearch=0
-  " inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 endif
 
