@@ -15,9 +15,9 @@ if has('win32')
   " for Windows
 
   " Font Setttings.
-  set guifont=Ricty_Diminished:h12
+  set guifont=RictyDiminishedDiscord_NF:h14
   set linespace=-1
-  set renderoptions=type:directx
+  set renderoptions=type:directx,renmode:5
   set antialias
 
   " Set Transparency.
