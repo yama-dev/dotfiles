@@ -1,9 +1,15 @@
+# :call map(dein#check_clean(), "delete(v:val, 'rf')")
 # :call dein#recache_runtimepath()
+
+# Required:
+[[plugins]]
+repo = 'Shougo/dein.vim'
 
 # denite.
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 
+# Required:
 [[plugins]]
 repo = 'roxma/nvim-yarp'
 on_if = '!has("nvim")'
@@ -12,20 +18,9 @@ on_if = '!has("nvim")'
 repo = 'roxma/vim-hug-neovim-rpc'
 on_if = '!has("nvim")'
 
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-on_source = 'denite.nvim'
-on_path = '.*'
-
-[[plugins]] # Yank
-repo = 'Shougo/neoyank.vim'
-on_source = 'denite.nvim'
-on_event = 'TextYankPost'
-
 # language server.
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-rev = 'release'
 merged = '0'
 hook_add = '''
 let g:coc_global_extensions = [
