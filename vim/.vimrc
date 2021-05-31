@@ -74,6 +74,8 @@ if has('vim_starting') && dein#check_install()
  call dein#install()
 endif
 
+let g:dein#auto_recache = 1
+
 "--------------------------------------------------
 """ Settings.
 
