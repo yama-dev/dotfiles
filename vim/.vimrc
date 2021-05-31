@@ -133,17 +133,33 @@ set mouse=a
 
 """ Encoding.
 set encoding=utf-8
-set fileencoding=utf-8
-"set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" set fileencoding=utf-8
+set fileencodings=utf-8,sjis
+set fileformats=unix,dos,mac
 scriptencoding utf-8
 
-set noswapfile
-set noundofile
 """ Backup file settings (file.txt~)
 set backup
-set backupdir=~/.vim/
+set backupdir=~/.vim/backup/,~/temp/backup/
+if !isdirectory(expand('~/.vim/backup/'))
+  call mkdir(expand('~/.vim/backup/'))
+endif
 
-" Set cd.
+""" Swap file settings (.file.txt.swp)
+set swapfile
+set directory=~/.vim/backup/,~/temp/backup/
+" set updatetime=30000 "30秒ごとに保存
+set updatetime=300
+" set updatecount=500 "500文字タイプするごとに保存
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+""" Undo file settings (.file.txt.un~)
+set undofile
+set undodir=~/.vim/backup/,~/temp/backup/
+
+""" Set cd.
 if has('autochdir')
   set autochdir
 endif
@@ -202,12 +218,12 @@ set scrolloff=5
 """ enable backspace.
 set backspace=indent,eol,start
 
-" remove scroll bar.
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-set guioptions-=b
+""" remove scroll bar.
+" set guioptions-=r
+" set guioptions-=R
+" set guioptions-=l
+" set guioptions-=L
+" set guioptions-=b
 
 set wrap
 
@@ -390,6 +406,8 @@ augroup END
 
 """ remove new-line auto commentout.
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+autocmd FileType snippets setlocal shiftwidth=2 tabstop=2
 
 """ remove line-end space.
 autocmd BufWritePre * :%s/\s\+$//ge
