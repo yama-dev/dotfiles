@@ -116,8 +116,8 @@ set number
 """ diff
 set diffopt=internal,filler,iwhiteall,vertical
 
-set cmdheight=3
 """ Command line.
+set cmdheight=5
 set wildmenu
 set wildmode=list:longest,list:full
 set wildchar=<tab>
@@ -196,8 +196,8 @@ set visualbell
 
 set showmatch
 
-set scrolloff=3
 """ scroll offset.
+set scrolloff=5
 
 """ enable backspace.
 set backspace=indent,eol,start
