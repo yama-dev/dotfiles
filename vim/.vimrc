@@ -1,17 +1,17 @@
-" vimrc
+""" vimrc
 
-" reset augroup
+""" reset augroup
 augroup MyAutoCmd
 autocmd!
 augroup END
 
 "--------------------------------------------------
-" Import
+""" Import
 
 source $HOME/vimfiles/functions.vim
 
 "--------------------------------------------------
-" Setting Plugin.
+""" Setting Plugin.
 
 if IsWindows()
   if has('nvim')
@@ -75,13 +75,13 @@ if has('vim_starting') && dein#check_install()
 endif
 
 "--------------------------------------------------
-" Settings.
+""" Settings.
 
-" Common.
+""" Common.
 let g:mapleader = "\<Space>"
 set shellslash
 
-" Search and Replace.
+""" Search and Replace.
 set hlsearch
 set ignorecase
 set smartcase
@@ -91,7 +91,7 @@ if has('nvim')
   set inccommand=split
 endif
 
-" Tabs.
+""" Tabs.
 set tabstop=2
 set shiftwidth=2
 set softtabstop=0
@@ -99,43 +99,43 @@ set expandtab
 set smarttab
 set shiftround
 
-" Indent.
+""" Indent.
 set autoindent
 set smartindent
 
-" Window size at startup.
+""" Window size at startup.
 set columns=160
 set lines=50
 
-" Line Number.
+""" Line Number.
 set number
 " set relativenumber
 
 
-" Command line.
 set cmdheight=3
+""" Command line.
 set wildmenu
 set wildmode=list:longest,list:full
 set wildchar=<tab>
 set wildignore+=.git/*,.svn/*,.DS_Store,*.swp
 set wildignore+=node_modules/*
 
-" Format option.
+""" Format option.
 set formatoptions+=mM
 
-" Mouse
+""" Mouse
 set mouse=a
 " set mousefocus
 
-" Encoding.
+""" Encoding.
 set encoding=utf-8
 set fileencoding=utf-8
 "set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 scriptencoding utf-8
 
-" Backup.
 set noswapfile
 set noundofile
+""" Backup file settings (file.txt~)
 set backup
 set backupdir=~/.vim/
 
@@ -144,19 +144,19 @@ if has('autochdir')
   set autochdir
 endif
 
-" Move cursor to move.
+""" Move cursor to move.
 set whichwrap=b,s,h,l,<,>,[,]
 
-" clip board.
+""" clip board.
 if has('nvim')
   set clipboard+=unnamedplus
 endif
 
-" For IME.
+""" For IME.
 " set ambiwidth=single
 set ambiwidth=double
 
-" Set Fold.
+""" Set Fold.
 set foldmethod=manual
 " manual: 手動で折畳を定義する
 " indent: インデントの数を折畳のレベル(深さ)とする
@@ -165,11 +165,11 @@ set foldmethod=manual
 " diff:   変更されていないテキストを折畳対象とする
 " marker: テキスト中の印で折畳を定義する
 
-" Set Syntax.
+""" Set Syntax.
 set conceallevel=0
 set synmaxcol=300
 
-" Display current line.
+""" Display current line.
 " set cursorline
 " set cursorcolumn
 
@@ -177,7 +177,7 @@ set synmaxcol=300
 set listchars=tab:>-,extends:<,trail:-,eol:<
 " set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
-" Set Viminfo.
+""" Set Viminfo.
 set viminfo='20,f1,<500,s100,h,%
 set viminfo+=n~/.vim/viminfo
 
@@ -192,10 +192,10 @@ set visualbell
 
 set showmatch
 
-" scroll offset.
 set scrolloff=3
+""" scroll offset.
 
-" enable backspace.
+""" enable backspace.
 set backspace=indent,eol,start
 
 " remove scroll bar.
@@ -207,7 +207,7 @@ set guioptions-=b
 
 set wrap
 
-" file type setting
+""" file type setting
 augroup AutoCmdFiletype
   autocmd!
   autocmd FileType html,markdown set synmaxcol=250
@@ -225,19 +225,19 @@ set ttyfast
 set lazyredraw
 
 "--------------------------------------------------
-" Settings key-bind.
+""" Settings key-bind.
 
-" Highlight cancellation by pressing Esc twice.
+""" Highlight cancellation by pressing Esc twice.
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
-" change tabsize.
+""" change tabsize.
 map <F9> <C-w>10<
 map <F10> <C-w>10>
 
-" change tabsize.
+""" change tabsize.
 map <F11> :ToggleFullScreen<CR>
 
-" Settings For Search and Replace.
+""" Settings For Search and Replace.
 nnoremap / /\v
 nnoremap <C-g> :vimgrep **/* \| cw
 nnoremap <C-g>g :vimgrep /^.*js\-.*js.*$/ **/*.js | cw
@@ -248,12 +248,12 @@ nnoremap <Leader>z /\zs\ze.*
 " Grep.
 autocmd QuickFixCmdPost *grep* cwindow
 
-" Open new tab.
+""" Open new tab.
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
-" move cursor line.
+""" move cursor line.
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
@@ -275,11 +275,11 @@ inoremap <C-k> <ESC>10ka
 inoremap <C-h> <ESC>10ha
 inoremap <C-l> <ESC>10la
 
-" Not register overwrite.
+""" Not register overwrite.
 xnoremap s "_s
 nnoremap dd "_dd
 
-" Add Line.
+""" Add Line.
 nnoremap <Leader>al  :%s/$/\r/gc<CR>
 vnoremap <Leader>al  :s/$/\r/gc<CR>
 
@@ -297,7 +297,7 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 inoremap jj <Esc>
 
-" Checkout IME-mode.
+""" Checkout IME-mode.
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
 nnoremap <silent><expr> * v:count ? '*'
@@ -307,12 +307,12 @@ nnoremap <silent><expr> * v:count ? '*'
 " vnoremap > >gv
 
 "--------------------------------------------------
-" Grep Settings.
+""" Grep Settings.
 set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git\ --exclude-dir=node_modules
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 
-" ripgrep
+""" ripgrep
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading
   set grepformat=%f:%l:%c:%m,%f:%l:%m
@@ -321,34 +321,34 @@ command! -nargs=* -complete=file Rg :tabnew | :silent grep --sort-files <args>
 command! -nargs=* -complete=file Rgg :tabnew | :silent grep <args>
 
 "--------------------------------------------------
-" Settings For Terminal.
+""" Settings For Terminal.
 
-" Instantly insert mode.
+""" Instantly insert mode.
 if has('nvim')
   autocmd WinEnter * if &buftype ==# 'terminal' | startinsert | endif
 else
   autocmd WinEnter * if &buftype ==# 'terminal' | normal i | endif
 endif
 
-" Paste register.
+""" Paste register.
 if has('nvim')
   tnoremap <expr> <A-v> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 endif
 
 "--------------------------------------------------
-" Settings For PHP.
+""" Settings For PHP.
 
-" $VIMRUNTIME/syntax/php.vim
+""" $VIMRUNTIME/syntax/php.vim
 let g:php_baselib       = 1
 let g:php_htmlInStrings = 1
 let g:php_noShortTags   = 1
 let g:php_sql_query     = 1
 
-" $VIMRUNTIME/syntax/sql.vim
+""" $VIMRUNTIME/syntax/sql.vim
 let g:sql_type_default = 'mysql' " For MySQL
 
 "--------------------------------------------------
-" Settings For HTML.
+""" Settings For HTML.
 
 augroup AutoCmdHtml
   autocmd!
@@ -359,9 +359,9 @@ augroup AutoCmdHtml
 augroup END
 
 "--------------------------------------------------
-" Settings Other.
+""" Settings Other.
 
-" Vim :w Use HHKB
+""" Vim :w Use HHKB
 map ; :
 
 set ttimeoutlen=50
@@ -377,22 +377,22 @@ augroup END
 set lazyredraw
 set ttyfast
 
-" hilight in comment.
+""" hilight in comment.
 augroup HilightsForce
   autocmd!
   autocmd WinEnter,BufRead,BufNew,Syntax * :silent! call matchadd('Todo', '\(TODO\|NOTE\|INFO\|XXX\|TASK\|TEMP\):')
   autocmd WinEnter,BufRead,BufNew,Syntax * highlight Todo guibg=Red guifg=White
 augroup END
 
-" remove new-line auto commentout.
+""" remove new-line auto commentout.
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" remove line-end space.
+""" remove line-end space.
 autocmd BufWritePre * :%s/\s\+$//ge
 
 "--------------------------------------------------
 
-" Import
+""" Import
 source $HOME/vimfiles/startify.vim
 source $HOME/vimfiles/coc.vim
 source $HOME/vimfiles/coc-explorer.vim
