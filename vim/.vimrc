@@ -113,6 +113,8 @@ set lines=50
 set number
 " set relativenumber
 
+""" diff
+set diffopt=internal,filler,iwhiteall,vertical
 
 set cmdheight=3
 """ Command line.
