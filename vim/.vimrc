@@ -238,6 +238,8 @@ augroup AutoCmdFiletype
   autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
   autocmd BufRead,BufNewFile,BufReadPre *.scss set filetype=scss
   autocmd BufRead,BufNewFile,BufReadPre *.toml set filetype=toml
+  autocmd BufRead,BufNewFile,BufReadPre *.ejs set filetype=html.ejs
+  autocmd BufRead,BufNewFile,BufReadPre *.ts set filetype=typescript
 augroup END
 
 set regexpengine=1
