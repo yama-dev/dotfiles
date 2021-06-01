@@ -267,8 +267,8 @@ nnoremap <C-g>f :/\( \\| \)
 nnoremap <C-h> :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
 
-" Grep.
-autocmd QuickFixCmdPost *grep* cwindow
+""" Grep.
+autocmd QuickFixCmdPost *grep* cwindow 22
 
 """ Open new tab.
 nnoremap <Leader>t :tabnew<CR>
