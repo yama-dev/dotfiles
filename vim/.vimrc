@@ -287,13 +287,15 @@ nnoremap <C-b> 20k
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-nnoremap <C-h> ^
-nnoremap <C-l> g_
-vnoremap <C-h> ^
-vnoremap <C-l> g_
+nnoremap <S-h> ^
+nnoremap <S-l> g_
+nnoremap <C-h> 10h
+nnoremap <C-l> 10l
+vnoremap <S-h> ^
+vnoremap <S-l> g_
+vnoremap <C-h> 10h
+vnoremap <C-l> 10l
 
-inoremap <C-j> <ESC>10ja
-inoremap <C-k> <ESC>10ka
 inoremap <C-h> <ESC>10ha
 inoremap <C-l> <ESC>10la
 
