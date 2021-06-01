@@ -230,7 +230,7 @@ set wrap
 """ file type setting
 augroup AutoCmdFiletype
   autocmd!
-  autocmd FileType html,markdown set synmaxcol=250
+  autocmd FileType html,markdown set synmaxcol=320
   autocmd BufRead,BufNewFile,BufReadPre *.txt set filetype=markdown
   autocmd BufRead,BufNewFile,BufReadPre *.jsx set filetype=javascript.jsx
   autocmd BufRead,BufNewFile,BufReadPre *.es set filetype=javascript
