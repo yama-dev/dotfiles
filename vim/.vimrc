@@ -267,6 +267,10 @@ nnoremap <C-g>f :/\( \\| \)
 nnoremap <C-h> :%s;;;gc
 nnoremap <Leader>z /\zs\ze.*
 
+" :g/abc/d                 """ abc を含む行を削除する
+" :v/abc/d                 """ abc を含まない行を削除する
+" :g//z#.5|echo '----'     """ ヒットする行の前後を確認する場合
+
 """ Grep.
 autocmd QuickFixCmdPost *grep* cwindow 22
 
