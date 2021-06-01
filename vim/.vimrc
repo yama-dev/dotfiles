@@ -386,6 +386,9 @@ augroup AutoCmdHtml
   autocmd Filetype xml,html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
+let g:html_indent_inctags = ""
+let g:html_indent_autotags = "html,body"
+
 "--------------------------------------------------
 """ Settings Other.
 
