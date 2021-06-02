@@ -311,9 +311,9 @@ nnoremap dd "_dd
 nnoremap <Leader>al  :%s/$/\r/gc<CR>
 vnoremap <Leader>al  :s/$/\r/gc<CR>
 
-" Delete Line.
-nnoremap <Leader>dl  :%s/^$\n//gc<CR>
-vnoremap <Leader>dl  :s/^$\n//gc<CR>
+""" Delete Line.
+" nnoremap <Leader>dl  :%s/^$\n//gc<CR>
+" vnoremap <Leader>dl  :s/^$\n//gc<CR>
 
 """ Delete Space.
 " nnoremap <Leader>ds  :%s/\s\+//gc<CR>
