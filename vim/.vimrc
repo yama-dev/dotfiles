@@ -315,9 +315,15 @@ vnoremap <Leader>al  :s/$/\r/gc<CR>
 nnoremap <Leader>dl  :%s/^$\n//gc<CR>
 vnoremap <Leader>dl  :s/^$\n//gc<CR>
 
-" Delete Space.
-nnoremap <Leader>ds  :%s/\s\+//gc<CR>
-vnoremap <Leader>ds  :s/\s\+//gc<CR>
+""" Delete Space.
+" nnoremap <Leader>ds  :%s/\s\+//gc<CR>
+" vnoremap <Leader>ds  :s/\s\+//gc<CR>
+
+""" 一致した行を消す
+" :%g/^.*Port.*$/d
+
+""" 一致しない行を消す
+" :%v/^.*Port.*$/d
 
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
