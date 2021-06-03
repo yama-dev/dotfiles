@@ -345,9 +345,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Haron-Prime/Antares'
 hook_add = '''
-au MyAutoCmd VimEnter * nested colorscheme Antares
 '''
 
 # colorscheme.
@@ -373,5 +371,11 @@ hook_add = '''
 repo = 'danishprakash/vim-yami'
 hook_add = '''
 "  au MyAutoCmd VimEnter * nested colorscheme yami
+'''
+
+[[plugins]]
+repo = 'Haron-Prime/Antares'
+hook_add = '''
+au MyAutoCmd VimEnter * nested colorscheme Antares
 '''
 
