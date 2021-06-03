@@ -254,10 +254,10 @@ hook_add = '''
   " xmap <C-l> <Plug>(textmanip-move-right)
 
   " use allow key to force replace movement
-  xmap  <Up>     <Plug>(textmanip-move-up-r)
-  xmap  <Down>   <Plug>(textmanip-move-down-r)
-  xmap  <Left>   <Plug>(textmanip-move-left-r)
-  xmap  <Right>  <Plug>(textmanip-move-right-r)
+  " xmap  <Up>     <Plug>(textmanip-move-up-r)
+  " xmap  <Down>   <Plug>(textmanip-move-down-r)
+  " xmap  <Left>   <Plug>(textmanip-move-left-r)
+  " xmap  <Right>  <Plug>(textmanip-move-right-r)
 '''
 
 [[plugins]]
