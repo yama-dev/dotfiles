@@ -285,16 +285,13 @@ autocmd FileType qf nnoremap <silent><buffer>q :quit<CR>
 
 # Util.
 [[plugins]]
-repo = 'terryma/vim-multiple-cursors'
+repo = 'mg979/vim-visual-multi'
+rev = 'master'
 hook_add = '''
-  let g:multi_cursor_use_default_mapping=0
-
-  let g:multi_cursor_start_word_key      = '<C-n>'
-  let g:multi_cursor_select_all_word_key = '<A-n>'
-  let g:multi_cursor_next_key            = '<C-n>'
-  let g:multi_cursor_prev_key            = '<C-p>'
-  let g:multi_cursor_skip_key            = '<C-x>'
-  let g:multi_cursor_quit_key            = '<Esc>'
+let g:VM_default_mappings = 0
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"] = '<M-j>' " new cursor down
+let g:VM_maps["Add Cursor Up"]   = '<M-k>' " new cursor up
 '''
 
 [[plugins]]
