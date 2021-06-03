@@ -131,17 +131,15 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'nikvdp/ejs-syntax'
+on_ft = ['ejs', 'html', 'html.ejs']
+
+[[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['css','scss','sass','less']
 
 [[plugins]]
-repo = 'othree/yajs.vim'
-
-[[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-
-[[plugins]]
-repo = 'alampros/vim-styled-jsx'
+repo = 'othree/yajs.vim' # jypescript Syntax
 on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
@@ -149,8 +147,19 @@ repo = 'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript', 'javascript.jsx']
+hook_add = '''
+  let g:used_javascript_libs = 'jquery,underscore,backbone,react,flux,requirejs,handlebars,vue'
+'''
+
+# # TypeScript Syntax
+# [[plugins]]
+# repo = 'HerringtonDarkholme/yats.vim'
+
+[[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript', 'typescriptreact', 'typescript.tsx']
+# on_ft = ['typescript', 'typescriptreact', 'typescript.tsx']
 
 # React
 [[plugins]]
