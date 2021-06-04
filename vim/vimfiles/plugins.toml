@@ -246,6 +246,10 @@ hook_add = '''
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'cohama/agit.vim'
+# document https://github.com/cohama/agit.vim/blob/master/doc/agit.txt
+
 # Format.
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
