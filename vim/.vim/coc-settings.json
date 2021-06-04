@@ -49,6 +49,7 @@
       "filetypes": ["go"]
     }
   },
+
   "markdownlint.config": {
     "no-trailing-spaces": {
       "br_spaces": 2
@@ -62,6 +63,8 @@
     },
     "no-emphasis-as-heading": false
   },
+  "snippets.priority": 100,
+  "snippets.userSnippetsDirectory": "~/vimfiles/snippets",
   "snippets.extends": {
     "php": ["php", "wordpress"]
   }
