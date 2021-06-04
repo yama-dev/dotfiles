@@ -25,10 +25,9 @@ merged = '0'
 hook_add = '''
 let g:coc_global_extensions = [
   \ 'https://github.com/jason-pomerleau/vscode-wordpress-toolbox',
-  \ 'coc-browser',
-  \ 'coc-calc',
   \ 'coc-cmake',
   \ 'coc-css',
+  \ 'coc-dictionary',
   \ 'coc-emmet',
   \ 'coc-emoji',
   \ 'coc-eslint',
@@ -36,7 +35,10 @@ let g:coc_global_extensions = [
   \ 'coc-floaterm',
   \ 'coc-git',
   \ 'coc-go',
+  \ 'coc-highlight',
   \ 'coc-html',
+  \ 'coc-htmlhint',
+  \ 'coc-html-css-support',
   \ 'coc-json',
   \ 'coc-lists',
   \ 'coc-markdownlint',
@@ -45,16 +47,20 @@ let g:coc_global_extensions = [
   \ 'coc-powershell',
   \ 'coc-prettier',
   \ 'coc-rls',
+  \ 'coc-sh',
   \ 'coc-snippets',
+  \ 'coc-sql',
+  \ 'coc-stylelint',
   \ 'coc-syntax',
-  \ 'coc-template',
   \ 'coc-tsserver',
+  \ 'coc-tslint',
   \ 'coc-vetur',
   \ 'coc-vimlsp',
   \ 'coc-xml',
   \ 'coc-yaml',
   \ 'coc-yank',
   \ ]
+  autocmd CursorHold * silent call CocActionAsync('highlight')
 '''
 
 # Diff view
@@ -309,15 +315,15 @@ hook_add = '''
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_add = '''
-  " mapping
-  nmap n <Plug>(anzu-n-with-echo)
-  nmap N <Plug>(anzu-N-with-echo)
-  nmap * <Plug>(anzu-star-with-echo)
-  nmap # <Plug>(anzu-sharp-with-echo)
-  " clear status
-  nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
-  " statusline
-  set statusline=%{anzu#search_status()}
+ " mapping
+ nmap n <Plug>(anzu-n-with-echo)
+ nmap N <Plug>(anzu-N-with-echo)
+ nmap * <Plug>(anzu-star-with-echo)
+ nmap # <Plug>(anzu-sharp-with-echo)
+ " clear status
+ nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+ " statusline
+ set statusline=%{anzu#search_status()}
 '''
 
 [[plugins]]
