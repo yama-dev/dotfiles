@@ -66,6 +66,18 @@
   "snippets.priority": 100,
   "snippets.userSnippetsDirectory": "~/vimfiles/snippets",
   "snippets.extends": {
-    "php": ["php", "wordpress"]
-  }
+    "css": ["scss"],
+    "scss": ["css"],
+    "php": ["php", "wordpress", "html"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "yank.priority": 0,
+
+  "emmet.variables": {
+    "lang": "ja"
+  },
+
+  "explorer.icon.enableNerdfont": true,
+  "explorer.file.showHiddenFiles": true
 }
