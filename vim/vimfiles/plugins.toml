@@ -166,6 +166,11 @@ repo = 'leafgarland/typescript-vim'
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx']
 
+# [[plugins]]
+# repo = 'styled-components/vim-styled-components'
+# on_ft = ['javascript', 'javascript.jsx']
+
+# Nodejs
 [[plugins]]
 repo = 'moll/vim-node'
 on_ft = ['javascript']
