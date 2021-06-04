@@ -1,46 +1,132 @@
 {
-  "suggest": {
-    "snippetIndicator": "->"
-  },
-  "css": {
-    "filetypes": [
-      "css",
-      "less",
-      "scss",
-      "sass"
-    ]
-  },
-  "tsserver": {
-    "enableJavascript": true
-  },
-  "tslint": {
-    "jsEnable": true
-  },
-  "eslint": {
-    "packageManager": "npm",
-    "autoFixOnSave": false,
-    "filetypes": [
-      "javascript",
-      "typescript",
-      "typescriptreact",
-      "javascriptreact",
-      "typescript.tsx"
-    ]
-  },
-  "list": {
-    "maxHeight": 30
-  },
-  "prettier": {
-    "printWidth": 120,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": false,
-    "semi": true,
-    "useTabs": false,
-    "arrowParens": "avoid"
-  },
+  "suggest.snippetIndicator": " -->> ",
+  "suggest.enablePreview": true,
+
+  "phpls.enable": true,
+  "phpls.path": "~/.nodebrew/current/bin/intelephense",
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dba",
+    "dom",
+    "enchant",
+    "exif",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "hash",
+    "iconv",
+    "imap",
+    "interbase",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "mcrypt",
+    "meta",
+    "mssql",
+    "mysqli",
+    "oci8",
+    "odbc",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_ibm",
+    "pdo_mysql",
+    "pdo_pgsql",
+    "pdo_sqlite",
+    "pgsql",
+    "Phar",
+    "posix",
+    "pspell",
+    "readline",
+    "recode",
+    "Reflection",
+    "regex",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "snmp",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "sqlite3",
+    "standard",
+    "superglobals",
+    "sybase",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tidy",
+    "tokenizer",
+    "wddx",
+    "wordpress",
+    "xml",
+    "xmlreader",
+    "xmlrpc",
+    "xmlwriter",
+    "Zend OPcache",
+    "zip",
+    "zlib"
+  ],
+
+  "html.filetypes": [
+    "html",
+    "htm",
+    "handlebars",
+    "blade",
+    "ejs",
+    "html.ejs",
+    "twig",
+    "php"
+  ],
+
+  "htmlhint.documentSelector": [
+    "html",
+    "htm",
+    "handlebars",
+    "blade",
+    "ejs",
+    "html.ejs",
+    "twig",
+    "php"
+  ],
+
+  "css.lint.universalSelector": "warning",
+  "css.lint.duplicateProperties": "warning",
+  "scss.lint.universalSelector": "warning",
+  "scss.lint.duplicateProperties": "warning",
+
+  "eslint.packageManager": "npm",
+  "eslint.autoFixOnSave": false,
+
+  "list.source.grep.command": "rg",
+
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.parser": "none",
+  "prettier.semi": true,
+  "prettier.useTabs": false,
+  "prettier.proseWrap": "preserve",
+  "prettier.arrowParens": "avoid",
+
   "languageserver": {
     "golang": {
       "command": "gopls",
