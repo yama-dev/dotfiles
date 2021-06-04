@@ -57,38 +57,17 @@ let g:coc_global_extensions = [
   \ ]
 '''
 
-# Interface.
+# Diff view
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
-depends = 'unite.vim'
+repo = 'will133/vim-dirdiff'
 hook_add = '''
-  let g:vimfiler_as_default_explorer=1
-  let g:vimfiler_safe_mode_by_default=0
-  let g:vimfiler_enable_auto_cd=1
-  "option -simple
-  noremap <silent> <Space>f :<C-u>VimFilerBufferDir -split -winwidth=50 -toggle -no-quit<CR>
-'''
-
-[[plugins]]
-repo = 'ujihisa/unite-colorscheme'
-depends = 'unite.vim'
-hook_add = '''
-  let g:unite_colorscheme_blacklist = [
-    \ 'blue', 'darkblue', 'delek', 'evening', 'koehler', 'morning', 'industry',
-    \ 'shine', 'murphy', 'pablo', 'peachpuff', 'ron', 'slate', 'zellner']
-  " :Unite colorscheme -auto-preview
+  let g:DirDiffAddArgs = "-f"
+  let g:DirDiffExcludes = "node_modules,*.exe,.*.swp"
+  let g:DirDiffIgnoreCase = 0
+  let g:DirDiffWindowSize = 20
 '''
 
 # Indent view.
-# [[plugins]]
-# repo = 'Yggdroot/indentLine'
-# hook_add = '''
-#   let g:indentLine_faster = 1
-# '''
-
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
@@ -97,11 +76,6 @@ hook_add = '''
 
   let g:indent_guides_guide_size = 1
   let g:indent_guides_start_level = 2
-
-" " change color.
-" let g:indent_guides_auto_colors = 0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 '''
 
 [[plugins]]
@@ -112,10 +86,12 @@ repo = 'vim-scripts/renamer.vim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-hook_add = '''
-  let g:user_emmet_leader_key='<C-e>'
-  let g:user_emmet_settings={"variables":{"lang":"ja"}}
-'''
+on_ft = ['html','vue','scss','css','sass']
+
+# [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = '0'
 
 [[plugins]]
 repo = 'tikhomirov/vim-glsl'
